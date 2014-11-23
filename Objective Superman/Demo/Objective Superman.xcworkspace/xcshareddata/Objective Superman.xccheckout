@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E88E118C-ADA7-4F99-9643-1CC5D83862F8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Objective Superman</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3AFB919A4D7ADA13B53893D2FD97B8214E198FAB</key>
+		<string>github.com:zats/Presentations.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Objective Superman/Demo/Objective Superman.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3AFB919A4D7ADA13B53893D2FD97B8214E198FAB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:zats/Presentations.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3AFB919A4D7ADA13B53893D2FD97B8214E198FAB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3AFB919A4D7ADA13B53893D2FD97B8214E198FAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Presentations</string>
+		</dict>
+	</array>
+</dict>
+</plist>

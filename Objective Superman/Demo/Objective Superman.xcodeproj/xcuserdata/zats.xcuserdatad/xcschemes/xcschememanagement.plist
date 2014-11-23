@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Frankenstein.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Smarser.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5C70A41B1A22695900DD3E2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C70A4331A22695900DD3E2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5CB52B9E1A20CE1700A6CAC5</key>
 		<dict>
 			<key>primary</key>

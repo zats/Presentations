@@ -8,15 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1F90DC923CD53A2B627F84AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264DE04F232888DB9BEF7D52 /* libPods.a */; };
-		5C8274811A1F893700065FDE /* Xray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8274801A1F893700065FDE /* Xray.m */; };
-		5CDC4B1E1A1F812200AE6B85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4B1D1A1F812200AE6B85 /* main.m */; };
-		5CDC4B211A1F812200AE6B85 /* XrayVisionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4B201A1F812200AE6B85 /* XrayVisionAppDelegate.m */; };
-		5CDC4B241A1F812200AE6B85 /* XrayVisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4B231A1F812200AE6B85 /* XrayVisionViewController.m */; };
-		5CDC4B271A1F812200AE6B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC4B251A1F812200AE6B85 /* Main.storyboard */; };
-		5CDC4B291A1F812200AE6B85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC4B281A1F812200AE6B85 /* Images.xcassets */; };
-		5CDC4B2C1A1F812200AE6B85 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC4B2A1A1F812200AE6B85 /* LaunchScreen.xib */; };
-		5CDC4B491A1F83BC00AE6B85 /* Shoebox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4B481A1F83BC00AE6B85 /* Shoebox.m */; };
-		5CDC4B4C1A1F83CA00AE6B85 /* Vault.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC4B4B1A1F83CA00AE6B85 /* Vault.m */; };
+		5C70A40B1A22617A00DD3E2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A3FA1A22617A00DD3E2F /* LaunchScreen.xib */; };
+		5C70A40C1A22617A00DD3E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A3FC1A22617A00DD3E2F /* Main.storyboard */; };
+		5C70A40D1A22617A00DD3E2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A3FE1A22617A00DD3E2F /* Images.xcassets */; };
+		5C70A40E1A22617A00DD3E2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A3FF1A22617A00DD3E2F /* Info.plist */; };
+		5C70A40F1A22617A00DD3E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4001A22617A00DD3E2F /* main.m */; };
+		5C70A4101A22617A00DD3E2F /* Shoebox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4021A22617A00DD3E2F /* Shoebox.m */; };
+		5C70A4111A22617A00DD3E2F /* Vault.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4041A22617A00DD3E2F /* Vault.m */; };
+		5C70A4121A22617A00DD3E2F /* Xray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4061A22617A00DD3E2F /* Xray.m */; };
+		5C70A4131A22617A00DD3E2F /* XrayVisionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4081A22617A00DD3E2F /* XrayVisionAppDelegate.m */; };
+		5C70A4141A22617A00DD3E2F /* XrayVisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A40A1A22617A00DD3E2F /* XrayVisionViewController.m */; };
+		5C70A4211A22695900DD3E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4201A22695900DD3E2F /* main.m */; };
+		5C70A4241A22695900DD3E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4231A22695900DD3E2F /* AppDelegate.m */; };
+		5C70A4271A22695900DD3E2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4261A22695900DD3E2F /* ViewController.m */; };
+		5C70A42A1A22695900DD3E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A4281A22695900DD3E2F /* Main.storyboard */; };
+		5C70A42C1A22695900DD3E2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A42B1A22695900DD3E2F /* Images.xcassets */; };
+		5C70A42F1A22695900DD3E2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A42D1A22695900DD3E2F /* LaunchScreen.xib */; };
+		5C70A44E1A226D5500DD3E2F /* Lab.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4431A226D5500DD3E2F /* Lab.m */; };
+		5C70A44F1A226D5500DD3E2F /* PeterParker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4451A226D5500DD3E2F /* PeterParker.m */; };
+		5C70A4501A226D5500DD3E2F /* Pig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4471A226D5500DD3E2F /* Pig.m */; };
+		5C70A4511A226D5500DD3E2F /* Spider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4491A226D5500DD3E2F /* Spider.m */; };
+		5C70A4521A226D5500DD3E2F /* Spiderman.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A44B1A226D5500DD3E2F /* Spiderman.m */; };
+		5C70A4531A226D5500DD3E2F /* SpiderPig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A44D1A226D5500DD3E2F /* SpiderPig.m */; };
+		5C70A4561A226DA100DD3E2F /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4551A226DA100DD3E2F /* Animal.m */; };
 		5CF20AB01A20F18C004EE0C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AAF1A20F18C004EE0C2 /* main.m */; };
 		5CF20AB31A20F18C004EE0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB21A20F18C004EE0C2 /* AppDelegate.m */; };
 		5CF20AB61A20F18C004EE0C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB51A20F18C004EE0C2 /* ViewController.m */; };
@@ -33,22 +47,46 @@
 
 /* Begin PBXFileReference section */
 		264DE04F232888DB9BEF7D52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C82747F1A1F893700065FDE /* Xray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xray.h; path = ../Xray/Xray.h; sourceTree = "<group>"; };
-		5C8274801A1F893700065FDE /* Xray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Xray.m; path = ../Xray/Xray.m; sourceTree = "<group>"; };
+		5C70A3FB1A22617A00DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5C70A3FD1A22617A00DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C70A3FE1A22617A00DD3E2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C70A3FF1A22617A00DD3E2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C70A4001A22617A00DD3E2F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C70A4011A22617A00DD3E2F /* Shoebox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shoebox.h; sourceTree = "<group>"; };
+		5C70A4021A22617A00DD3E2F /* Shoebox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shoebox.m; sourceTree = "<group>"; };
+		5C70A4031A22617A00DD3E2F /* Vault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vault.h; sourceTree = "<group>"; };
+		5C70A4041A22617A00DD3E2F /* Vault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vault.m; sourceTree = "<group>"; };
+		5C70A4051A22617A00DD3E2F /* Xray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xray.h; sourceTree = "<group>"; };
+		5C70A4061A22617A00DD3E2F /* Xray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xray.m; sourceTree = "<group>"; };
+		5C70A4071A22617A00DD3E2F /* XrayVisionAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XrayVisionAppDelegate.h; sourceTree = "<group>"; };
+		5C70A4081A22617A00DD3E2F /* XrayVisionAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XrayVisionAppDelegate.m; sourceTree = "<group>"; };
+		5C70A4091A22617A00DD3E2F /* XrayVisionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XrayVisionViewController.h; sourceTree = "<group>"; };
+		5C70A40A1A22617A00DD3E2F /* XrayVisionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XrayVisionViewController.m; sourceTree = "<group>"; };
+		5C70A41C1A22695900DD3E2F /* Frankenstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frankenstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C70A41F1A22695900DD3E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C70A4201A22695900DD3E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C70A4221A22695900DD3E2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C70A4231A22695900DD3E2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C70A4251A22695900DD3E2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C70A4261A22695900DD3E2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C70A4291A22695900DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C70A42B1A22695900DD3E2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C70A42E1A22695900DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5C70A4421A226D5500DD3E2F /* Lab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lab.h; sourceTree = "<group>"; };
+		5C70A4431A226D5500DD3E2F /* Lab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lab.m; sourceTree = "<group>"; };
+		5C70A4441A226D5500DD3E2F /* PeterParker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeterParker.h; sourceTree = "<group>"; };
+		5C70A4451A226D5500DD3E2F /* PeterParker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeterParker.m; sourceTree = "<group>"; };
+		5C70A4461A226D5500DD3E2F /* Pig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pig.h; sourceTree = "<group>"; };
+		5C70A4471A226D5500DD3E2F /* Pig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pig.m; sourceTree = "<group>"; };
+		5C70A4481A226D5500DD3E2F /* Spider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spider.h; sourceTree = "<group>"; };
+		5C70A4491A226D5500DD3E2F /* Spider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spider.m; sourceTree = "<group>"; };
+		5C70A44A1A226D5500DD3E2F /* Spiderman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spiderman.h; sourceTree = "<group>"; };
+		5C70A44B1A226D5500DD3E2F /* Spiderman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spiderman.m; sourceTree = "<group>"; };
+		5C70A44C1A226D5500DD3E2F /* SpiderPig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpiderPig.h; sourceTree = "<group>"; };
+		5C70A44D1A226D5500DD3E2F /* SpiderPig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiderPig.m; sourceTree = "<group>"; };
+		5C70A4541A226DA100DD3E2F /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		5C70A4551A226DA100DD3E2F /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		5CDC4B191A1F812200AE6B85 /* Xray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xray.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CDC4B1C1A1F812200AE6B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CDC4B1D1A1F812200AE6B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5CDC4B1F1A1F812200AE6B85 /* XrayVisionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XrayVisionAppDelegate.h; sourceTree = "<group>"; };
-		5CDC4B201A1F812200AE6B85 /* XrayVisionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XrayVisionAppDelegate.m; sourceTree = "<group>"; };
-		5CDC4B221A1F812200AE6B85 /* XrayVisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XrayVisionViewController.h; sourceTree = "<group>"; };
-		5CDC4B231A1F812200AE6B85 /* XrayVisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XrayVisionViewController.m; path = ../Xray/XrayVisionViewController.m; sourceTree = "<group>"; };
-		5CDC4B261A1F812200AE6B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5CDC4B281A1F812200AE6B85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5CDC4B2B1A1F812200AE6B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5CDC4B471A1F83BC00AE6B85 /* Shoebox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shoebox.h; path = ../Xray/Shoebox.h; sourceTree = "<group>"; };
-		5CDC4B481A1F83BC00AE6B85 /* Shoebox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shoebox.m; path = ../Xray/Shoebox.m; sourceTree = "<group>"; };
-		5CDC4B4A1A1F83CA00AE6B85 /* Vault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vault.h; path = ../Xray/Vault.h; sourceTree = "<group>"; };
-		5CDC4B4B1A1F83CA00AE6B85 /* Vault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vault.m; path = ../Xray/Vault.m; sourceTree = "<group>"; };
 		5CF20AAB1A20F18C004EE0C2 /* Smarser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smarser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF20AAE1A20F18C004EE0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF20AAF1A20F18C004EE0C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +112,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C70A4191A22695900DD3E2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC4B161A1F812200AE6B85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,11 +146,80 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C70A3F91A22617A00DD3E2F /* Xray */ = {
+			isa = PBXGroup;
+			children = (
+				5C70A4011A22617A00DD3E2F /* Shoebox.h */,
+				5C70A4021A22617A00DD3E2F /* Shoebox.m */,
+				5C70A4031A22617A00DD3E2F /* Vault.h */,
+				5C70A4041A22617A00DD3E2F /* Vault.m */,
+				5C70A4051A22617A00DD3E2F /* Xray.h */,
+				5C70A4061A22617A00DD3E2F /* Xray.m */,
+				5C70A40A1A22617A00DD3E2F /* XrayVisionViewController.m */,
+				5C70A4161A22618B00DD3E2F /* Supporting Files */,
+			);
+			path = Xray;
+			sourceTree = "<group>";
+		};
+		5C70A4161A22618B00DD3E2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C70A3FA1A22617A00DD3E2F /* LaunchScreen.xib */,
+				5C70A3FC1A22617A00DD3E2F /* Main.storyboard */,
+				5C70A3FE1A22617A00DD3E2F /* Images.xcassets */,
+				5C70A3FF1A22617A00DD3E2F /* Info.plist */,
+				5C70A4001A22617A00DD3E2F /* main.m */,
+				5C70A4071A22617A00DD3E2F /* XrayVisionAppDelegate.h */,
+				5C70A4081A22617A00DD3E2F /* XrayVisionAppDelegate.m */,
+				5C70A4091A22617A00DD3E2F /* XrayVisionViewController.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C70A41D1A22695900DD3E2F /* Frankenstein */ = {
+			isa = PBXGroup;
+			children = (
+				5C70A4541A226DA100DD3E2F /* Animal.h */,
+				5C70A4551A226DA100DD3E2F /* Animal.m */,
+				5C70A4421A226D5500DD3E2F /* Lab.h */,
+				5C70A4431A226D5500DD3E2F /* Lab.m */,
+				5C70A4441A226D5500DD3E2F /* PeterParker.h */,
+				5C70A4451A226D5500DD3E2F /* PeterParker.m */,
+				5C70A4461A226D5500DD3E2F /* Pig.h */,
+				5C70A4471A226D5500DD3E2F /* Pig.m */,
+				5C70A4481A226D5500DD3E2F /* Spider.h */,
+				5C70A4491A226D5500DD3E2F /* Spider.m */,
+				5C70A44A1A226D5500DD3E2F /* Spiderman.h */,
+				5C70A44B1A226D5500DD3E2F /* Spiderman.m */,
+				5C70A44C1A226D5500DD3E2F /* SpiderPig.h */,
+				5C70A44D1A226D5500DD3E2F /* SpiderPig.m */,
+				5C70A4261A22695900DD3E2F /* ViewController.m */,
+				5C70A41E1A22695900DD3E2F /* Supporting Files */,
+			);
+			path = Frankenstein;
+			sourceTree = "<group>";
+		};
+		5C70A41E1A22695900DD3E2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C70A4221A22695900DD3E2F /* AppDelegate.h */,
+				5C70A4231A22695900DD3E2F /* AppDelegate.m */,
+				5C70A4251A22695900DD3E2F /* ViewController.h */,
+				5C70A4281A22695900DD3E2F /* Main.storyboard */,
+				5C70A42B1A22695900DD3E2F /* Images.xcassets */,
+				5C70A42D1A22695900DD3E2F /* LaunchScreen.xib */,
+				5C70A41F1A22695900DD3E2F /* Info.plist */,
+				5C70A4201A22695900DD3E2F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5CDC4AE31A1F7FD300AE6B85 = {
 			isa = PBXGroup;
 			children = (
-				5CDC4B1A1A1F812200AE6B85 /* Xray */,
+				5C70A3F91A22617A00DD3E2F /* Xray */,
 				5CF20AAC1A20F18C004EE0C2 /* Smarser */,
+				5C70A41D1A22695900DD3E2F /* Frankenstein */,
 				5CDC4AED1A1F7FD300AE6B85 /* Products */,
 				1C0F913F69C8DD7FABBEFD86 /* Pods */,
 				B2E2DD020DBC465502FD513E /* Frameworks */,
@@ -117,40 +231,9 @@
 			children = (
 				5CDC4B191A1F812200AE6B85 /* Xray.app */,
 				5CF20AAB1A20F18C004EE0C2 /* Smarser.app */,
+				5C70A41C1A22695900DD3E2F /* Frankenstein.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5CDC4B1A1A1F812200AE6B85 /* Xray */ = {
-			isa = PBXGroup;
-			children = (
-				5CDC4B231A1F812200AE6B85 /* XrayVisionViewController.m */,
-				5C82747F1A1F893700065FDE /* Xray.h */,
-				5C8274801A1F893700065FDE /* Xray.m */,
-				5CDC4B4A1A1F83CA00AE6B85 /* Vault.h */,
-				5CDC4B4B1A1F83CA00AE6B85 /* Vault.m */,
-				5CDC4B471A1F83BC00AE6B85 /* Shoebox.h */,
-				5CDC4B481A1F83BC00AE6B85 /* Shoebox.m */,
-				5CDC4B1B1A1F812200AE6B85 /* Supporting Files */,
-			);
-			name = Xray;
-			path = KVO;
-			sourceTree = "<group>";
-		};
-		5CDC4B1B1A1F812200AE6B85 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5CDC4B1F1A1F812200AE6B85 /* XrayVisionAppDelegate.h */,
-				5CDC4B201A1F812200AE6B85 /* XrayVisionAppDelegate.m */,
-				5CDC4B221A1F812200AE6B85 /* XrayVisionViewController.h */,
-				5CDC4B251A1F812200AE6B85 /* Main.storyboard */,
-				5CDC4B281A1F812200AE6B85 /* Images.xcassets */,
-				5CDC4B2A1A1F812200AE6B85 /* LaunchScreen.xib */,
-				5CDC4B1C1A1F812200AE6B85 /* Info.plist */,
-				5CDC4B1D1A1F812200AE6B85 /* main.m */,
-			);
-			name = "Supporting Files";
-			path = ../Xray;
 			sourceTree = "<group>";
 		};
 		5CF20AAC1A20F18C004EE0C2 /* Smarser */ = {
@@ -198,6 +281,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C70A41B1A22695900DD3E2F /* Frankenstein */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C70A43C1A22695900DD3E2F /* Build configuration list for PBXNativeTarget "Frankenstein" */;
+			buildPhases = (
+				5C70A4181A22695900DD3E2F /* Sources */,
+				5C70A4191A22695900DD3E2F /* Frameworks */,
+				5C70A41A1A22695900DD3E2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Frankenstein;
+			productName = Frankenstein;
+			productReference = 5C70A41C1A22695900DD3E2F /* Frankenstein.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5CDC4B181A1F812200AE6B85 /* Xray */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CDC4B391A1F812300AE6B85 /* Build configuration list for PBXNativeTarget "Xray" */;
@@ -243,6 +343,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Sash Zats";
 				TargetAttributes = {
+					5C70A41B1A22695900DD3E2F = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					5CDC4B181A1F812200AE6B85 = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -266,18 +369,30 @@
 			targets = (
 				5CDC4B181A1F812200AE6B85 /* Xray */,
 				5CF20AAA1A20F18C004EE0C2 /* Smarser */,
+				5C70A41B1A22695900DD3E2F /* Frankenstein */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C70A41A1A22695900DD3E2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C70A42A1A22695900DD3E2F /* Main.storyboard in Resources */,
+				5C70A42F1A22695900DD3E2F /* LaunchScreen.xib in Resources */,
+				5C70A42C1A22695900DD3E2F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC4B171A1F812200AE6B85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDC4B271A1F812200AE6B85 /* Main.storyboard in Resources */,
-				5CDC4B2C1A1F812200AE6B85 /* LaunchScreen.xib in Resources */,
-				5CDC4B291A1F812200AE6B85 /* Images.xcassets in Resources */,
+				5C70A40E1A22617A00DD3E2F /* Info.plist in Resources */,
+				5C70A40D1A22617A00DD3E2F /* Images.xcassets in Resources */,
+				5C70A40B1A22617A00DD3E2F /* LaunchScreen.xib in Resources */,
+				5C70A40C1A22617A00DD3E2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,16 +444,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C70A4181A22695900DD3E2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C70A4511A226D5500DD3E2F /* Spider.m in Sources */,
+				5C70A4521A226D5500DD3E2F /* Spiderman.m in Sources */,
+				5C70A4501A226D5500DD3E2F /* Pig.m in Sources */,
+				5C70A44F1A226D5500DD3E2F /* PeterParker.m in Sources */,
+				5C70A4271A22695900DD3E2F /* ViewController.m in Sources */,
+				5C70A4241A22695900DD3E2F /* AppDelegate.m in Sources */,
+				5C70A4211A22695900DD3E2F /* main.m in Sources */,
+				5C70A4561A226DA100DD3E2F /* Animal.m in Sources */,
+				5C70A44E1A226D5500DD3E2F /* Lab.m in Sources */,
+				5C70A4531A226D5500DD3E2F /* SpiderPig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC4B151A1F812200AE6B85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDC4B491A1F83BC00AE6B85 /* Shoebox.m in Sources */,
-				5C8274811A1F893700065FDE /* Xray.m in Sources */,
-				5CDC4B4C1A1F83CA00AE6B85 /* Vault.m in Sources */,
-				5CDC4B241A1F812200AE6B85 /* XrayVisionViewController.m in Sources */,
-				5CDC4B211A1F812200AE6B85 /* XrayVisionAppDelegate.m in Sources */,
-				5CDC4B1E1A1F812200AE6B85 /* main.m in Sources */,
+				5C70A4111A22617A00DD3E2F /* Vault.m in Sources */,
+				5C70A4121A22617A00DD3E2F /* Xray.m in Sources */,
+				5C70A4141A22617A00DD3E2F /* XrayVisionViewController.m in Sources */,
+				5C70A4131A22617A00DD3E2F /* XrayVisionAppDelegate.m in Sources */,
+				5C70A4101A22617A00DD3E2F /* Shoebox.m in Sources */,
+				5C70A40F1A22617A00DD3E2F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,18 +491,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CDC4B251A1F812200AE6B85 /* Main.storyboard */ = {
+		5C70A3FA1A22617A00DD3E2F /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CDC4B261A1F812200AE6B85 /* Base */,
+				5C70A3FB1A22617A00DD3E2F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		5C70A3FC1A22617A00DD3E2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C70A3FD1A22617A00DD3E2F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5CDC4B2A1A1F812200AE6B85 /* LaunchScreen.xib */ = {
+		5C70A4281A22695900DD3E2F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CDC4B2B1A1F812200AE6B85 /* Base */,
+				5C70A4291A22695900DD3E2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C70A42D1A22695900DD3E2F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C70A42E1A22695900DD3E2F /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -394,6 +542,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5C70A43D1A22695900DD3E2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Frankenstein/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C70A43E1A22695900DD3E2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Frankenstein/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5CDC4B0D1A1F7FD300AE6B85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,6 +697,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C70A43C1A22695900DD3E2F /* Build configuration list for PBXNativeTarget "Frankenstein" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C70A43D1A22695900DD3E2F /* Debug */,
+				5C70A43E1A22695900DD3E2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5CDC4AE71A1F7FD300AE6B85 /* Build configuration list for PBXProject "Objective Superman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
