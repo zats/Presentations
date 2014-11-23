@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Kent Clark",
+        "bird": false,
+        "plane": 0,
+    },
+    {
+        "name": "Peter Parker",
+        "power": "great",
+        "responsibility": "great"
+    },
+    {
+        "name": "Venom",
+        "power": 999999,
+        "responsibility": 0
+    }
+]
