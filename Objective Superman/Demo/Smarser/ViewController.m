@@ -21,22 +21,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *heroesJSON = [self _loadJSON];
-
-    NSMutableArray *heroes = [NSMutableArray arrayWithCapacity:heroesJSON.count];
-    for (NSDictionary *json in heroesJSON) {        
+    NSMutableArray *heroes = [NSMutableArray array];
+    for (NSDictionary *json in [self _JSON]) {
         id instance = [Smarser objectOfKind:[Hero class] withDictionary:json];
         if (instance) {
             [heroes addObject:instance];
         }
     }
-    NSLog(@"%@", heroes);
+
+    [heroes removeAllObjects];
+    
+    for (NSDictionary *json in [self _corruptedJSON]) {
+        id instance = [Smarser objectOfKind:[Hero class] withDictionary:json];
+        if (instance) {
+            [heroes addObject:instance];
+        }
+    }
+
 }
 
 #pragma mark - Private
 
-- (NSArray *)_loadJSON {
+- (NSArray *)_JSON {
     NSURL *URL = [[NSBundle mainBundle] URLForResource:@"heroes" withExtension:@"json"];
+    NSData *data = [NSData dataWithContentsOfURL:URL];
+    return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+}
+
+- (NSArray *)_corruptedJSON {
+    NSURL *URL = [[NSBundle mainBundle] URLForResource:@"heroes-corrupted" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:URL];
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 }
