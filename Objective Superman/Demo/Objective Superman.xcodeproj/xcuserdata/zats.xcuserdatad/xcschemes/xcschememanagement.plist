@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Swizzling.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Xray.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>5C70A4331A22695900DD3E2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C81BB5A1A2653B3009DC328</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C81BB721A2653B3009DC328</key>
 		<dict>
 			<key>primary</key>
 			<true/>

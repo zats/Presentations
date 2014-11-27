@@ -1,4 +1,5 @@
 PODS:
+  - JRSwizzle (1.0)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
   - ReactiveCocoa/Core (2.3.1):
@@ -8,9 +9,11 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
+  - JRSwizzle (~> 1.0)
   - ReactiveCocoa (~> 2.3.1)
 
 SPEC CHECKSUMS:
+  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
 
 COCOAPODS: 0.35.0

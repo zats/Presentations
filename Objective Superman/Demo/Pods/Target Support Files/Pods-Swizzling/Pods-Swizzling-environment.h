@@ -6,6 +6,12 @@
 // project.
 
 
+// JRSwizzle
+#define COCOAPODS_POD_AVAILABLE_JRSwizzle
+#define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
+#define COCOAPODS_VERSION_MINOR_JRSwizzle 0
+#define COCOAPODS_VERSION_PATCH_JRSwizzle 0
+
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
