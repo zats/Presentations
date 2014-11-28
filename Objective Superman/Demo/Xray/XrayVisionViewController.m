@@ -11,6 +11,7 @@
 #import "Xray.h"
 #import "Vault.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACBacktrace.h>
 #import <ReactiveCocoa/RACEXTKeyPathCoding.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
@@ -24,28 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self _setupVault];
+    [self setupVault];
+//    [self xrayMeBaby];
+//    [self someExtraXray];
 }
 
-- (void)dealloc {
-    [self teardownVault];
-}
-
-#pragma mark - Private
-
-- (void)teardownVault {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.vault stopXraying];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.vault stopVault];
-        self.vault = nil;
-    });
-}
-
-- (void)_setupVault {
-    self.vault = [[Vault alloc] init];
+- (void)setupVault {
+    self.vault = [Vault mainVault];
     [self.vault startVault];
 }
 
@@ -57,7 +43,7 @@
 
 - (void)someExtraXray {
     [self.vault xrayProperty:@keypath(self.vault, contents) withOptions:XrayOptionGetter handler:^(id target, NSString *property, id contents) {
-        NSLog(@"%@.%@ = %@", [target class], property, contents);
+        NSLog(@"%@.%@ was accessed:\n%@", [target class], property, [RACBacktrace backtrace].callStackSymbols[2]);
     }];
 }
 

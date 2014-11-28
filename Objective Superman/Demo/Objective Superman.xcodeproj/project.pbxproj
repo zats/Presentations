@@ -31,15 +31,16 @@
 		5C70A4521A226D5500DD3E2F /* Spiderman.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A44B1A226D5500DD3E2F /* Spiderman.m */; };
 		5C70A4531A226D5500DD3E2F /* SpiderPig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A44D1A226D5500DD3E2F /* SpiderPig.m */; };
 		5C70A4561A226DA100DD3E2F /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4551A226DA100DD3E2F /* Animal.m */; };
+		5C7776381A28BC1500021FAB /* BadGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB891A2658CF009DC328 /* BadGuy.m */; };
+		5C77763B1A28BCFD00021FAB /* AnotherBadGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77763A1A28BCFD00021FAB /* AnotherBadGuy.m */; };
 		5C81BB601A2653B3009DC328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB5F1A2653B3009DC328 /* main.m */; };
 		5C81BB631A2653B3009DC328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB621A2653B3009DC328 /* AppDelegate.m */; };
 		5C81BB661A2653B3009DC328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB651A2653B3009DC328 /* ViewController.m */; };
 		5C81BB691A2653B3009DC328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB671A2653B3009DC328 /* Main.storyboard */; };
 		5C81BB6B1A2653B3009DC328 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB6A1A2653B3009DC328 /* Images.xcassets */; };
 		5C81BB6E1A2653B3009DC328 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB6C1A2653B3009DC328 /* LaunchScreen.xib */; };
-		5C81BB831A2653C5009DC328 /* Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB821A2653C5009DC328 /* Swizzling.m */; };
+		5C81BB831A2653C5009DC328 /* Superswizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB821A2653C5009DC328 /* Superswizzling.m */; };
 		5C81BB8A1A2658CF009DC328 /* BadGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB891A2658CF009DC328 /* BadGuy.m */; };
-		5C81BB8D1A265AEA009DC328 /* BadGuy+JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB8C1A265AEA009DC328 /* BadGuy+JRSwizzle.m */; };
 		5CF20AB01A20F18C004EE0C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AAF1A20F18C004EE0C2 /* main.m */; };
 		5CF20AB31A20F18C004EE0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB21A20F18C004EE0C2 /* AppDelegate.m */; };
 		5CF20AB61A20F18C004EE0C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB51A20F18C004EE0C2 /* ViewController.m */; };
@@ -98,6 +99,8 @@
 		5C70A44D1A226D5500DD3E2F /* SpiderPig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiderPig.m; sourceTree = "<group>"; };
 		5C70A4541A226DA100DD3E2F /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		5C70A4551A226DA100DD3E2F /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		5C7776391A28BCFD00021FAB /* AnotherBadGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherBadGuy.h; sourceTree = "<group>"; };
+		5C77763A1A28BCFD00021FAB /* AnotherBadGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherBadGuy.m; sourceTree = "<group>"; };
 		5C81BB5B1A2653B3009DC328 /* Swizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C81BB5E1A2653B3009DC328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C81BB5F1A2653B3009DC328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,12 +111,10 @@
 		5C81BB681A2653B3009DC328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C81BB6A1A2653B3009DC328 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C81BB6D1A2653B3009DC328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5C81BB811A2653C5009DC328 /* Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzling.h; sourceTree = "<group>"; };
-		5C81BB821A2653C5009DC328 /* Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzling.m; sourceTree = "<group>"; };
+		5C81BB811A2653C5009DC328 /* Superswizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Superswizzling.h; sourceTree = "<group>"; };
+		5C81BB821A2653C5009DC328 /* Superswizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Superswizzling.m; sourceTree = "<group>"; };
 		5C81BB881A2658CF009DC328 /* BadGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadGuy.h; sourceTree = "<group>"; };
 		5C81BB891A2658CF009DC328 /* BadGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadGuy.m; sourceTree = "<group>"; };
-		5C81BB8B1A265AEA009DC328 /* BadGuy+JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BadGuy+JRSwizzle.h"; sourceTree = "<group>"; };
-		5C81BB8C1A265AEA009DC328 /* BadGuy+JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BadGuy+JRSwizzle.m"; sourceTree = "<group>"; };
 		5CDC4B191A1F812200AE6B85 /* Xray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF20AAB1A20F18C004EE0C2 /* Smarser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smarser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF20AAE1A20F18C004EE0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +195,8 @@
 				5C70A4041A22617A00DD3E2F /* Vault.m */,
 				5C70A4051A22617A00DD3E2F /* Xray.h */,
 				5C70A4061A22617A00DD3E2F /* Xray.m */,
+				5C7776391A28BCFD00021FAB /* AnotherBadGuy.h */,
+				5C77763A1A28BCFD00021FAB /* AnotherBadGuy.m */,
 				5C70A40A1A22617A00DD3E2F /* XrayVisionViewController.m */,
 				5C70A4161A22618B00DD3E2F /* Supporting Files */,
 			);
@@ -259,11 +262,9 @@
 				5C81BB651A2653B3009DC328 /* ViewController.m */,
 				5C81BB881A2658CF009DC328 /* BadGuy.h */,
 				5C81BB891A2658CF009DC328 /* BadGuy.m */,
-				5C81BB8B1A265AEA009DC328 /* BadGuy+JRSwizzle.h */,
-				5C81BB8C1A265AEA009DC328 /* BadGuy+JRSwizzle.m */,
+				5C81BB811A2653C5009DC328 /* Superswizzling.h */,
+				5C81BB821A2653C5009DC328 /* Superswizzling.m */,
 				5C81BB5D1A2653B3009DC328 /* Supporting Files */,
-				5C81BB811A2653C5009DC328 /* Swizzling.h */,
-				5C81BB821A2653C5009DC328 /* Swizzling.m */,
 			);
 			path = Swizzling;
 			sourceTree = "<group>";
@@ -602,10 +603,9 @@
 			files = (
 				5C81BB661A2653B3009DC328 /* ViewController.m in Sources */,
 				5C81BB8A1A2658CF009DC328 /* BadGuy.m in Sources */,
-				5C81BB8D1A265AEA009DC328 /* BadGuy+JRSwizzle.m in Sources */,
 				5C81BB631A2653B3009DC328 /* AppDelegate.m in Sources */,
 				5C81BB601A2653B3009DC328 /* main.m in Sources */,
-				5C81BB831A2653C5009DC328 /* Swizzling.m in Sources */,
+				5C81BB831A2653C5009DC328 /* Superswizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,11 +614,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C70A4111A22617A00DD3E2F /* Vault.m in Sources */,
+				5C7776381A28BC1500021FAB /* BadGuy.m in Sources */,
 				5C70A4121A22617A00DD3E2F /* Xray.m in Sources */,
 				5C70A4141A22617A00DD3E2F /* XrayVisionViewController.m in Sources */,
 				5C70A4131A22617A00DD3E2F /* XrayVisionAppDelegate.m in Sources */,
 				5C70A4101A22617A00DD3E2F /* Shoebox.m in Sources */,
 				5C70A40F1A22617A00DD3E2F /* main.m in Sources */,
+				5C77763B1A28BCFD00021FAB /* AnotherBadGuy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

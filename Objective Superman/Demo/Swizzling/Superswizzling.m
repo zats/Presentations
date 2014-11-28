@@ -1,12 +1,12 @@
 //
-//  Swizzling.m
+//  Superswizzling.m
 //  Objective Superman
 //
 //  Created by Sash Zats on 11/26/14.
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "Swizzling.h"
+#import "Superswizzling.h"
 
 #import <objc/runtime.h>
 

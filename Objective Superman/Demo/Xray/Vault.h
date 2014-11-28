@@ -12,6 +12,8 @@
 
 @interface Vault : Shoebox
 
++ (instancetype)mainVault;
+
 @property (nonatomic, copy, readonly) NSString *code;
 
 - (void)startVault;

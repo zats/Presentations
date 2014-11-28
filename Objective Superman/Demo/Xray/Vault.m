@@ -20,6 +20,15 @@
 
 @implementation Vault
 
++ (instancetype)mainVault {
+    static Vault *mainVault;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        mainVault = [[Vault alloc] init];
+    });
+    return mainVault;
+}
+
 #pragma mark - Lifecycle
 
 - (instancetype)init {
@@ -27,9 +36,7 @@
     if (!self) {
         return nil;
     }
-    
-    self.contents = [UIImage imageNamed:@"superman-1"];
-    
+    self.contents = [UIImage imageNamed:@"superman-1"];    
     return self;
 }
 
@@ -61,7 +68,10 @@
         passwords = @[ @"123456", @"password", @"12345678", @"qwerty", @"abc123", @"123456789", @"111111", @"1234567", @"iloveyou", @"adobe123", @"123123", @"admin", @"1234567890", @"letmein", @"photoshop", @"1234", @"monkey", @"shadow", @"sunshine", @"12345", @"password1", @"princess", @"azerty", @"trustno1" ];
     });
     NSString *code = passwords[arc4random_uniform((u_int32_t)passwords.count)];
-    NSLog(@"Vault's new code is %@", [code stringByReplacingOccurrencesOfString:@"." withString:@"*" options:NSRegularExpressionSearch range:NSMakeRange(0, code.length)]);
+    NSLog(@"Vault's new code is %@", [code stringByReplacingOccurrencesOfString:@"."
+                                                                     withString:@"*"
+                                                                        options:NSRegularExpressionSearch
+                                                                          range:NSMakeRange(0, code.length)]);
     self.code = code;
 }
 
