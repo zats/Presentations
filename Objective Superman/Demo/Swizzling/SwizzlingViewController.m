@@ -12,20 +12,8 @@
 #import "Superswizzling.h"
 #import <JRSwizzle/JRSwizzle.h>
 
-@implementation BadGuy (JRSwizzle)
-
-- (void)swizzled_doInnocentStuff {
-    NSLog(@"Tra-la-la");
-}
-
-- (void)swizzled_doBadStuff {
-    NSLog(@"Be quiet now, they are about to do bad stuff!");
-    
-    [self swizzled_doBadStuff];
-    
-    NSLog(@"A-ha!");
-}
-
+@interface BadGuy (JRSwizzle)
+- (void)swizzled_doBadStuff;
 @end
 
 
@@ -41,29 +29,17 @@
     BadGuy *badGuy = [[BadGuy alloc] init];
     [badGuy doInnocentStuff];
     
-    [self _jr_swizzleStuff];
 //    [self _jr_swizzleBadStuff];
     
-    [self _super_swizzleStuff];
     [self _super_swizzleBadStuff];
     
     [badGuy doInnocentStuff];
-}
-
-- (void)_jr_swizzleStuff {
-    [BadGuy jr_swizzleMethod:@selector(doInnocentStuff)
-                  withMethod:@selector(swizzled_doInnocentStuff)
-                       error:nil];
 }
 
 - (void)_jr_swizzleBadStuff {
     [BadGuy jr_swizzleMethod:@selector(doBadStuff)
                   withMethod:@selector(swizzled_doBadStuff)
                        error:nil];
-}
-
-- (void)_super_swizzleStuff {
-    
 }
 
 - (void)_super_swizzleBadStuff {
@@ -74,6 +50,19 @@
         badStuff(self, badStuffSelector);
         NSLog(@"A-ha! Hold it right there!");
     }];
+}
+
+@end
+
+
+@implementation BadGuy (JRSwizzle)
+
+- (void)swizzled_doBadStuff {
+    NSLog(@"Be quiet now, they are about to do bad stuff!");
+    
+    [self swizzled_doBadStuff];
+    
+    NSLog(@"A-ha!");
 }
 
 @end

@@ -238,7 +238,7 @@ As done by those fine gentleman:
 # Thank you
 ![](http://ia.media-imdb.com/images/M/MV5BMTUyMTIxNzE1M15BMl5BanBnXkFtZTgwOTU0ODQ4MTE@._V1_SX640_SY720_.jpg)
 
-* This talk and demos [github.com](https://github.com/zats/Presentations/tree/master/Objective Superman)
+* This talk and demos [github.com/zats/Presentations](https://github.com/zats/Presentations/tree/master/Objective Superman)
 * Objective-C runtime [opensource.apple.com](http://opensource.apple.com/source/objc4/objc4-646/)
 * [twitter.com/zats](https://twitter.com/zats)
 * [github.com/zats](https://github.com/zats)
