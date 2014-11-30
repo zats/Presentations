@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SwizzlingViewController.h"
 
 #import "BadGuy.h"
 #import "Superswizzling.h"
@@ -29,11 +29,11 @@
 @end
 
 
-@interface ViewController ()
+@interface SwizzlingViewController ()
 @end
 
 
-@implementation ViewController
+@implementation SwizzlingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

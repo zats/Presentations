@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SmarserViewController.h"
 
 #import "Smarser.h"
 #import "Spiderman.h"
 #import "Superman.h"
 
-@interface ViewController ()
+@interface SmarserViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SmarserViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

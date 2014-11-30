@@ -20,7 +20,7 @@
 		5C70A4141A22617A00DD3E2F /* XrayVisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A40A1A22617A00DD3E2F /* XrayVisionViewController.m */; };
 		5C70A4211A22695900DD3E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4201A22695900DD3E2F /* main.m */; };
 		5C70A4241A22695900DD3E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4231A22695900DD3E2F /* AppDelegate.m */; };
-		5C70A4271A22695900DD3E2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4261A22695900DD3E2F /* ViewController.m */; };
+		5C70A4271A22695900DD3E2F /* FrankensteinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C70A4261A22695900DD3E2F /* FrankensteinViewController.m */; };
 		5C70A42A1A22695900DD3E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A4281A22695900DD3E2F /* Main.storyboard */; };
 		5C70A42C1A22695900DD3E2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A42B1A22695900DD3E2F /* Images.xcassets */; };
 		5C70A42F1A22695900DD3E2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70A42D1A22695900DD3E2F /* LaunchScreen.xib */; };
@@ -35,7 +35,7 @@
 		5C77763B1A28BCFD00021FAB /* AnotherBadGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77763A1A28BCFD00021FAB /* AnotherBadGuy.m */; };
 		5C81BB601A2653B3009DC328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB5F1A2653B3009DC328 /* main.m */; };
 		5C81BB631A2653B3009DC328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB621A2653B3009DC328 /* AppDelegate.m */; };
-		5C81BB661A2653B3009DC328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB651A2653B3009DC328 /* ViewController.m */; };
+		5C81BB661A2653B3009DC328 /* SwizzlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB651A2653B3009DC328 /* SwizzlingViewController.m */; };
 		5C81BB691A2653B3009DC328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB671A2653B3009DC328 /* Main.storyboard */; };
 		5C81BB6B1A2653B3009DC328 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB6A1A2653B3009DC328 /* Images.xcassets */; };
 		5C81BB6E1A2653B3009DC328 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C81BB6C1A2653B3009DC328 /* LaunchScreen.xib */; };
@@ -43,7 +43,7 @@
 		5C81BB8A1A2658CF009DC328 /* BadGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C81BB891A2658CF009DC328 /* BadGuy.m */; };
 		5CF20AB01A20F18C004EE0C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AAF1A20F18C004EE0C2 /* main.m */; };
 		5CF20AB31A20F18C004EE0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB21A20F18C004EE0C2 /* AppDelegate.m */; };
-		5CF20AB61A20F18C004EE0C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB51A20F18C004EE0C2 /* ViewController.m */; };
+		5CF20AB61A20F18C004EE0C2 /* SmarserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF20AB51A20F18C004EE0C2 /* SmarserViewController.m */; };
 		5CF20AB91A20F18C004EE0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF20AB71A20F18C004EE0C2 /* Main.storyboard */; };
 		5CF20ABB1A20F18C004EE0C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF20ABA1A20F18C004EE0C2 /* Images.xcassets */; };
 		5CF20ABE1A20F18C004EE0C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF20ABC1A20F18C004EE0C2 /* LaunchScreen.xib */; };
@@ -80,8 +80,8 @@
 		5C70A4201A22695900DD3E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C70A4221A22695900DD3E2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C70A4231A22695900DD3E2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C70A4251A22695900DD3E2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C70A4261A22695900DD3E2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C70A4251A22695900DD3E2F /* FrankensteinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrankensteinViewController.h; sourceTree = "<group>"; };
+		5C70A4261A22695900DD3E2F /* FrankensteinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrankensteinViewController.m; sourceTree = "<group>"; };
 		5C70A4291A22695900DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C70A42B1A22695900DD3E2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C70A42E1A22695900DD3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 		5C81BB5F1A2653B3009DC328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C81BB611A2653B3009DC328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C81BB621A2653B3009DC328 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C81BB641A2653B3009DC328 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C81BB651A2653B3009DC328 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C81BB641A2653B3009DC328 /* SwizzlingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzlingViewController.h; sourceTree = "<group>"; };
+		5C81BB651A2653B3009DC328 /* SwizzlingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzlingViewController.m; sourceTree = "<group>"; };
 		5C81BB681A2653B3009DC328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C81BB6A1A2653B3009DC328 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C81BB6D1A2653B3009DC328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		5CF20AAF1A20F18C004EE0C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CF20AB11A20F18C004EE0C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CF20AB21A20F18C004EE0C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CF20AB41A20F18C004EE0C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5CF20AB51A20F18C004EE0C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CF20AB41A20F18C004EE0C2 /* SmarserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmarserViewController.h; sourceTree = "<group>"; };
+		5CF20AB51A20F18C004EE0C2 /* SmarserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarserViewController.m; sourceTree = "<group>"; };
 		5CF20AB81A20F18C004EE0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CF20ABA1A20F18C004EE0C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CF20ABD1A20F18C004EE0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				5C70A44B1A226D5500DD3E2F /* Spiderman.m */,
 				5C70A44C1A226D5500DD3E2F /* SpiderPig.h */,
 				5C70A44D1A226D5500DD3E2F /* SpiderPig.m */,
-				5C70A4261A22695900DD3E2F /* ViewController.m */,
+				5C70A4261A22695900DD3E2F /* FrankensteinViewController.m */,
 				5C70A41E1A22695900DD3E2F /* Supporting Files */,
 			);
 			path = Frankenstein;
@@ -246,7 +246,7 @@
 			children = (
 				5C70A4221A22695900DD3E2F /* AppDelegate.h */,
 				5C70A4231A22695900DD3E2F /* AppDelegate.m */,
-				5C70A4251A22695900DD3E2F /* ViewController.h */,
+				5C70A4251A22695900DD3E2F /* FrankensteinViewController.h */,
 				5C70A4281A22695900DD3E2F /* Main.storyboard */,
 				5C70A42B1A22695900DD3E2F /* Images.xcassets */,
 				5C70A42D1A22695900DD3E2F /* LaunchScreen.xib */,
@@ -259,7 +259,7 @@
 		5C81BB5C1A2653B3009DC328 /* Swizzling */ = {
 			isa = PBXGroup;
 			children = (
-				5C81BB651A2653B3009DC328 /* ViewController.m */,
+				5C81BB651A2653B3009DC328 /* SwizzlingViewController.m */,
 				5C81BB881A2658CF009DC328 /* BadGuy.h */,
 				5C81BB891A2658CF009DC328 /* BadGuy.m */,
 				5C81BB811A2653C5009DC328 /* Superswizzling.h */,
@@ -274,7 +274,7 @@
 			children = (
 				5C81BB611A2653B3009DC328 /* AppDelegate.h */,
 				5C81BB621A2653B3009DC328 /* AppDelegate.m */,
-				5C81BB641A2653B3009DC328 /* ViewController.h */,
+				5C81BB641A2653B3009DC328 /* SwizzlingViewController.h */,
 				5C81BB671A2653B3009DC328 /* Main.storyboard */,
 				5C81BB6A1A2653B3009DC328 /* Images.xcassets */,
 				5C81BB6C1A2653B3009DC328 /* LaunchScreen.xib */,
@@ -311,7 +311,7 @@
 		5CF20AAC1A20F18C004EE0C2 /* Smarser */ = {
 			isa = PBXGroup;
 			children = (
-				5CF20AB51A20F18C004EE0C2 /* ViewController.m */,
+				5CF20AB51A20F18C004EE0C2 /* SmarserViewController.m */,
 				5CF20ADC1A20F65C004EE0C2 /* Smarser.h */,
 				5CF20ADD1A20F65C004EE0C2 /* Smarser.m */,
 				5CF20AD61A20F562004EE0C2 /* Spiderman.h */,
@@ -332,7 +332,7 @@
 				5CF20AD41A20F541004EE0C2 /* Hero.m */,
 				5CF20AB11A20F18C004EE0C2 /* AppDelegate.h */,
 				5CF20AB21A20F18C004EE0C2 /* AppDelegate.m */,
-				5CF20AB41A20F18C004EE0C2 /* ViewController.h */,
+				5CF20AB41A20F18C004EE0C2 /* SmarserViewController.h */,
 				5CF20AB71A20F18C004EE0C2 /* Main.storyboard */,
 				5CF20ABA1A20F18C004EE0C2 /* Images.xcassets */,
 				5CF20ABC1A20F18C004EE0C2 /* LaunchScreen.xib */,
@@ -588,7 +588,7 @@
 				5C70A4521A226D5500DD3E2F /* Spiderman.m in Sources */,
 				5C70A4501A226D5500DD3E2F /* Pig.m in Sources */,
 				5C70A44F1A226D5500DD3E2F /* PeterParker.m in Sources */,
-				5C70A4271A22695900DD3E2F /* ViewController.m in Sources */,
+				5C70A4271A22695900DD3E2F /* FrankensteinViewController.m in Sources */,
 				5C70A4241A22695900DD3E2F /* AppDelegate.m in Sources */,
 				5C70A4211A22695900DD3E2F /* main.m in Sources */,
 				5C70A4561A226DA100DD3E2F /* Animal.m in Sources */,
@@ -601,7 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C81BB661A2653B3009DC328 /* ViewController.m in Sources */,
+				5C81BB661A2653B3009DC328 /* SwizzlingViewController.m in Sources */,
 				5C81BB8A1A2658CF009DC328 /* BadGuy.m in Sources */,
 				5C81BB631A2653B3009DC328 /* AppDelegate.m in Sources */,
 				5C81BB601A2653B3009DC328 /* main.m in Sources */,
@@ -629,7 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF20AD51A20F541004EE0C2 /* Hero.m in Sources */,
-				5CF20AB61A20F18C004EE0C2 /* ViewController.m in Sources */,
+				5CF20AB61A20F18C004EE0C2 /* SmarserViewController.m in Sources */,
 				5CF20AB31A20F18C004EE0C2 /* AppDelegate.m in Sources */,
 				5CF20AB01A20F18C004EE0C2 /* main.m in Sources */,
 				5CF20ADE1A20F65C004EE0C2 /* Smarser.m in Sources */,

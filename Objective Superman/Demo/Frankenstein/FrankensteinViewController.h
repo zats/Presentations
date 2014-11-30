@@ -1,14 +1,14 @@
 //
 //  ViewController.h
-//  Swizzling
+//  Frankenstein
 //
-//  Created by Sash Zats on 11/26/14.
+//  Created by Sash Zats on 11/23/14.
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FrankensteinViewController : UIViewController
 
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FrankensteinViewController.h"
 
 #import "Lab.h"
 
@@ -14,11 +14,11 @@
 #import "SpiderPig.h"
 #import "Spiderman.h"
 
-@interface ViewController ()
+@interface FrankensteinViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FrankensteinViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -4,7 +4,20 @@
 
 ---
 
-# Have you ever seen something similar?
+# `$ whoami`
+![inline](assets/wml.png)
+
+### iOS Champion @ [wondermall.com](https://wondermall.com)
+
+^ E-commerce platform.
+
+^ iOS developer in a full-stack developers company.
+
+^ This is my only chance to talk to people who know iOS.
+
+---
+
+# Looks familiar?
 ![left](assets/IMG_0714.jpg)
 
 ```objectivec
@@ -20,6 +33,8 @@ if (!counters[key]) {
 NSInteger count = [counters[key] integerValue];
 ```
 
+^ Everyone probably seen or written code similar to this
+
 ---
 
 # We can do better!
@@ -33,23 +48,25 @@ NSInteger count = [counters[key] integerValue];
 NSUInteger count = [counters countForObject:key];
 ```
 
+^ But hey, there is a better alternative!
+
 ---
 
 # When the scheiße hits the fan
-
 ![left](assets/IMG_0704.jpg)
 
 * How often did you use `NSCountedSet`?
 * Know what is there at your disposal.
-* Right tool for the job.
 * :poop: hits the fan = :smirk_cat:
 
 ---
 
 # Swizzling
-![](assets/IMG_0705.jpg)
+![](http://cdn1.smosh.com/sites/default/files/ftpuploads/bloguploads/superpowers-suck-invulnerability2.jpg)
 
 ^ Who've done swizzling?
+
+^ Hi, my name is Sash and I swizzle.
 
 ---
 
@@ -85,7 +102,6 @@ As done by those fine gentleman:
 ---
 
 # The right way to swizzle[^3]
-
 ![right](assets/IMG_0710.jpg)
 
 * Each method has implicit `id` & `_cmd`
@@ -99,10 +115,9 @@ As done by those fine gentleman:
 ---
 
 # Swizzling tips
-
 ![left](assets/IMG_0718.jpg)
 
-* Don’t forget to prefix: `xyz_`
+* Prefix: `xyz_`
 * Calling original method: `[self xyz_swizzleMe]`
 * If swizzling initialisers, hint ARC semantics by adding `__attribute__((objc_method_family(init)))`[^5]
 * The right way to swizzle: functions or blocks, remember `_cmd`.
@@ -110,7 +125,7 @@ As done by those fine gentleman:
 ---
 
 # Properties inspection[^6]
-![](assets/IMG_0715.jpg)
+![](http://application.denofgeek.com/pics/film/superman/3a.jpg)
 
 ---
 
@@ -151,11 +166,12 @@ As done by those fine gentleman:
 ---
 
 # Dynamic class creation
-![](assets/IMG_0708.jpg)
+![](http://digitalart.io/wp-content/uploads/2013/06/man_of_steel_wallpaper_superman_movie_06.jpg)
 
 ---
 
 # Dynamic class creation
+![left](assets/IMG_0719.jpg)
 
 * Just like a regular subclassing.
 * Leave no trace: class does not exist in assembly.
@@ -169,6 +185,7 @@ As done by those fine gentleman:
 ---
 
 # Dynamic class creation: tips
+![right](assets/IMG_0721.jpg)
 
 * UIKit & Foundation use it twice. Twice!
 * Seems like a very esoteric exercise.
@@ -183,6 +200,7 @@ As done by those fine gentleman:
 ---
 
 # Let's build KVO
+![left](assets/IMG_0707.jpg)
 
 * We want to know when any given property is set
 * What a coincidence, we just learned everything we need!
@@ -197,8 +215,7 @@ As done by those fine gentleman:
 ---
 
 # Let's build KVO
-
-![left](assets/IMG_0707.jpg)
+![right](assets/IMG_0715.jpg)
 
 * Curiosity
 * KVO for getter
@@ -208,7 +225,6 @@ As done by those fine gentleman:
 ---
 
 # Conclusion
-
 ![right](assets/IMG_0720.jpg)
 
 * `<objc/runtime.h>` `!=` App Store.
@@ -219,27 +235,8 @@ As done by those fine gentleman:
 
 ---
 
-# One more thing
-
----
-
-# For all of you emoji lovers out there
-
----
-
-# Emoji 2015: Diversity[^10]
-
-![inline](http://cdn1.appleinsider.com/gallery/11003-3550-141104-Emoji-l.jpg)
-
----
-
-# No black cat emoji
-
-# :crying_cat_face:
-
----
-
 # Thank you
+![](http://ia.media-imdb.com/images/M/MV5BMTUyMTIxNzE1M15BMl5BanBnXkFtZTgwOTU0ODQ4MTE@._V1_SX640_SY720_.jpg)
 
 * This talk and demos [github.com](https://github.com/zats/Presentations/tree/master/Objective Superman)
 * Objective-C runtime [opensource.apple.com](http://opensource.apple.com/source/objc4/objc4-646/)
@@ -247,7 +244,8 @@ As done by those fine gentleman:
 * [github.com/zats](https://github.com/zats)
 * [tinder.com/zats](http://seriously/what?are=you&thinking=about)
 
----
+
+
 
 [^1]: https://www.mikeash.com/pyblog/friday-qa-2010-01-29-method-replacement-for-fun-and-profit.html
 
