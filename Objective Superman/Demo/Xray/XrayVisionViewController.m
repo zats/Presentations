@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupVault];
-//    [self xrayMeBaby];
-//    [self someExtraXray];
+    [self xrayMeBaby];
+    [self someExtraXray];
 }
 
 - (void)setupVault {

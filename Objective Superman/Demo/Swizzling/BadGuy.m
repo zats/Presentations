@@ -10,10 +10,6 @@
 
 @implementation BadGuy
 
-- (void)doInnocentStuff {
-    [self doBadStuff];
-}
-
 - (void)doBadStuff {
     NSAssert(_cmd == @selector(doBadStuff), @"Guys! They noticed us! Bail!");
     NSLog(@"* %@ is poking his nose *", self);

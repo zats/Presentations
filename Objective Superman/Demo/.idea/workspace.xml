@@ -4,9 +4,7 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ff09c61-ea26-4b41-8e08-4f27132448cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Xray/Xray.h" afterPath="$PROJECT_DIR$/Xray/Xray.h" />
-    </list>
+    <list default="true" id="8ff09c61-ea26-4b41-8e08-4f27132448cf" name="Default" comment="" />
     <ignored path="Objective Superman.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -2,6 +2,10 @@
 # [fit] Objective Superman
 ![](http://static.comicvine.com/uploads/original/11118/111188772/4202204-7119712926-Super.jpg)
 
+^ How many people understand English?
+
+^ How many people understand Objective-C?
+
 ---
 
 # `$ whoami`
@@ -9,11 +13,13 @@
 
 ### iOS Champion @ [wondermall.com](https://wondermall.com)
 
-^ E-commerce platform.
-
 ^ iOS developer in a full-stack developers company.
 
-^ This is my only chance to talk to people who know iOS.
+^ E-commerce platform.
+
+^ Enough about me, who are you?
+
+^ Show of hands: full time iOS developers
 
 ---
 
@@ -48,8 +54,6 @@ NSInteger count = [counters[key] integerValue];
 NSUInteger count = [counters countForObject:key];
 ```
 
-^ But hey, there is a better alternative!
-
 ---
 
 # When the scheiße hits the fan
@@ -58,6 +62,8 @@ NSUInteger count = [counters countForObject:key];
 * How often did you use `NSCountedSet`?
 * Know what is there at your disposal.
 * :poop: hits the fan = :smirk_cat:
+
+^ Code you don't have to write is the code you don't have to debug.
 
 ---
 
@@ -68,6 +74,8 @@ NSUInteger count = [counters countForObject:key];
 
 ^ Hi, my name is Sash and I swizzle.
 
+^ Some people in the audience even do it for living.
+
 ---
 
 # The way to swizzle
@@ -77,6 +85,8 @@ As done by those fine gentleman:
 
 * Mike Ash: "Method Replacement for Fun and Profit"[^1]
 * Jonathan "Wolf" Rentzsch: `JRSwizzle`[^2]
+
+^ Canonical sample code all over stackoverflow
 
 ---
 
@@ -96,8 +106,14 @@ As done by those fine gentleman:
 	[self xyz_viewDidLoad];
 }
 
+- (void)viewDidLoad {
+	NSLog(@"😽");
+}
+
 @end
 ```
+
+^ Kissing Cat Face With Closed Eyes
 
 ---
 
@@ -105,12 +121,13 @@ As done by those fine gentleman:
 ![right](assets/IMG_0710.jpg)
 
 * Each method has implicit `id` & `_cmd`
-* Calling original method through `-xyz_viewDidLoad`
 * Read about other people suffering[^4]
 
 ---
 
 # [fit] Demo :scream_cat:
+
+^ Let's take a look on why is it important to respect _cmd
 
 ---
 
@@ -130,7 +147,6 @@ As done by those fine gentleman:
 ---
 
 # Properties introspection: cool stuff.
-
 ![right](assets/IMG_0717.jpg)
 
 * List all the properties: name / type.
@@ -232,6 +248,20 @@ As done by those fine gentleman:
 * Swizzling to patch UIKit gotchas![^9]
 * Objective-C runtime is its own kryptonite.
 * "Wax on, wax off" – it comes together, when you need it.
+
+---
+
+# One more thing...
+
+---
+
+# Unicode 2015: Diversity
+
+![inline](http://cdn1.appleinsider.com/gallery/11003-3550-141104-Emoji-l.jpg)
+
+---
+
+# Still no black cat emoji :crying_cat_face:
 
 ---
 

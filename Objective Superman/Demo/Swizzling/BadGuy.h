@@ -10,8 +10,6 @@
 
 @interface BadGuy : NSObject
 
-- (void)doInnocentStuff;
-
 - (void)doBadStuff;
 
 @end

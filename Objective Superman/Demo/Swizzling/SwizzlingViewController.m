@@ -27,13 +27,13 @@
     [super viewDidLoad];
 
     BadGuy *badGuy = [[BadGuy alloc] init];
-    [badGuy doInnocentStuff];
+    [badGuy doBadStuff];
     
 //    [self _jr_swizzleBadStuff];
     
     [self _super_swizzleBadStuff];
     
-    [badGuy doInnocentStuff];
+    [badGuy doBadStuff];
 }
 
 - (void)_jr_swizzleBadStuff {
