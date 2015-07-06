@@ -1,0 +1,3 @@
+[submodule "Vendor/RHObjectiveBeagle"]
+	path = Vendor/RHObjectiveBeagle
+	url = git@github.com:heardrwt/RHObjectiveBeagle.git

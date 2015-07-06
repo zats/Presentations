@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C7EADA81A8C46E8001438E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADA71A8C46E8001438E2 /* main.m */; };
+		5C7EADAB1A8C46E8001438E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */; };
+		5C7EADB11A8C46E8001438E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADAF1A8C46E8001438E2 /* Main.storyboard */; };
+		5C7EADB31A8C46E8001438E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADB21A8C46E8001438E2 /* Images.xcassets */; };
+		5C7EADB61A8C46E8001438E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADB41A8C46E8001438E2 /* LaunchScreen.xib */; };
+		5C7EADD01A8C4F57001438E2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADCF1A8C4F57001438E2 /* RootViewController.m */; };
+		5C7EADD81A8CB605001438E2 /* LeaksInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */; };
+		5C7EADD91A8CB605001438E2 /* LeaksInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADD61A8C7591001438E2 /* LeaksInspector.m */; };
+		5C7EADDB1A8CCCD2001438E2 /* LeaksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */; };
+		5C7EADDE1A8CCD74001438E2 /* LeakingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */; };
+		5C7EADE11A8CCDDA001438E2 /* NotLeakingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */; };
+		5C7EADE51A8CED87001438E2 /* _LeaksInspectorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADE41A8CED87001438E2 /* _LeaksInspectorContext.m */; };
+		5C7EADEB1A8CF25C001438E2 /* LeaksSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */; };
+		8D7CF5E4EA9B8591CA6AE344 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C7EADBC1A8C46E8001438E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7EAD9A1A8C46E8001438E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7EADA11A8C46E8001438E2;
+			remoteInfo = Leaks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C7EADA21A8C46E8001438E2 /* Leaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7EADA61A8C46E8001438E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7EADA71A8C46E8001438E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C7EADA91A8C46E8001438E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C7EADB01A8C46E8001438E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C7EADB21A8C46E8001438E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C7EADB51A8C46E8001438E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5C7EADBB1A8C46E8001438E2 /* LeaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7EADC01A8C46E8001438E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7EADCE1A8C4F57001438E2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5C7EADCF1A8C4F57001438E2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5C7EADD11A8C7430001438E2 /* LeaksInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInstrument.h; sourceTree = "<group>"; };
+		5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksInstrument.m; sourceTree = "<group>"; };
+		5C7EADD51A8C7591001438E2 /* LeaksInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInspector.h; sourceTree = "<group>"; };
+		5C7EADD61A8C7591001438E2 /* LeaksInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksInspector.m; sourceTree = "<group>"; };
+		5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksTests.m; sourceTree = "<group>"; };
+		5C7EADDC1A8CCD74001438E2 /* LeakingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakingViewController.h; sourceTree = "<group>"; };
+		5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakingViewController.m; sourceTree = "<group>"; };
+		5C7EADDF1A8CCDDA001438E2 /* NotLeakingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotLeakingViewController.h; sourceTree = "<group>"; };
+		5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotLeakingViewController.m; sourceTree = "<group>"; };
+		5C7EADE31A8CED87001438E2 /* _LeaksInspectorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _LeaksInspectorContext.h; sourceTree = "<group>"; };
+		5C7EADE41A8CED87001438E2 /* _LeaksInspectorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _LeaksInspectorContext.m; sourceTree = "<group>"; };
+		5C7EADE61A8CEDF0001438E2 /* LeaksInspectorTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInspectorTypes.h; sourceTree = "<group>"; };
+		5C7EADE91A8CF25C001438E2 /* LeaksSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksSession.h; sourceTree = "<group>"; };
+		5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksSession.m; sourceTree = "<group>"; };
+		5CF70B9E1A9537AA00D73AA8 /* LeaksSession+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LeaksSession+Private.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C7EAD9F1A8C46E8001438E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7EADB81A8C46E8001438E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D7CF5E4EA9B8591CA6AE344 /* (null) in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C7EAD991A8C46E8001438E2 = {
+			isa = PBXGroup;
+			children = (
+				5C7EADA41A8C46E8001438E2 /* Leaks */,
+				5C7EADBE1A8C46E8001438E2 /* LeaksTests */,
+				5C7EADA31A8C46E8001438E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C7EADA31A8C46E8001438E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADA21A8C46E8001438E2 /* Leaks.app */,
+				5C7EADBB1A8C46E8001438E2 /* LeaksTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C7EADA41A8C46E8001438E2 /* Leaks */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADA91A8C46E8001438E2 /* AppDelegate.h */,
+				5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */,
+				5C7EADCE1A8C4F57001438E2 /* RootViewController.h */,
+				5C7EADCF1A8C4F57001438E2 /* RootViewController.m */,
+				5C7EADDC1A8CCD74001438E2 /* LeakingViewController.h */,
+				5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */,
+				5C7EADDF1A8CCDDA001438E2 /* NotLeakingViewController.h */,
+				5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */,
+				5C7EADD41A8C757D001438E2 /* Instrument */,
+				5C7EADA51A8C46E8001438E2 /* Supporting Files */,
+			);
+			path = Leaks;
+			sourceTree = "<group>";
+		};
+		5C7EADA51A8C46E8001438E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADAF1A8C46E8001438E2 /* Main.storyboard */,
+				5C7EADB21A8C46E8001438E2 /* Images.xcassets */,
+				5C7EADB41A8C46E8001438E2 /* LaunchScreen.xib */,
+				5C7EADA61A8C46E8001438E2 /* Info.plist */,
+				5C7EADA71A8C46E8001438E2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C7EADBE1A8C46E8001438E2 /* LeaksTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */,
+				5C7EADBF1A8C46E8001438E2 /* Supporting Files */,
+			);
+			path = LeaksTests;
+			sourceTree = "<group>";
+		};
+		5C7EADBF1A8C46E8001438E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADC01A8C46E8001438E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C7EADD41A8C757D001438E2 /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADE21A8CED65001438E2 /* Private */,
+				5C7EADE61A8CEDF0001438E2 /* LeaksInspectorTypes.h */,
+				5C7EADD11A8C7430001438E2 /* LeaksInstrument.h */,
+				5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */,
+				5C7EADE91A8CF25C001438E2 /* LeaksSession.h */,
+				5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */,
+				5C7EADD51A8C7591001438E2 /* LeaksInspector.h */,
+				5C7EADD61A8C7591001438E2 /* LeaksInspector.m */,
+			);
+			name = Instrument;
+			sourceTree = "<group>";
+		};
+		5C7EADE21A8CED65001438E2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADE31A8CED87001438E2 /* _LeaksInspectorContext.h */,
+				5C7EADE41A8CED87001438E2 /* _LeaksInspectorContext.m */,
+				5CF70B9E1A9537AA00D73AA8 /* LeaksSession+Private.h */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C7EADA11A8C46E8001438E2 /* Leaks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7EADC51A8C46E8001438E2 /* Build configuration list for PBXNativeTarget "Leaks" */;
+			buildPhases = (
+				5C7EAD9E1A8C46E8001438E2 /* Sources */,
+				5C7EAD9F1A8C46E8001438E2 /* Frameworks */,
+				5C7EADA01A8C46E8001438E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Leaks;
+			productName = Leaks;
+			productReference = 5C7EADA21A8C46E8001438E2 /* Leaks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C7EADBA1A8C46E8001438E2 /* LeaksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7EADC81A8C46E8001438E2 /* Build configuration list for PBXNativeTarget "LeaksTests" */;
+			buildPhases = (
+				5C7EADB71A8C46E8001438E2 /* Sources */,
+				5C7EADB81A8C46E8001438E2 /* Frameworks */,
+				5C7EADB91A8C46E8001438E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7EADBD1A8C46E8001438E2 /* PBXTargetDependency */,
+			);
+			name = LeaksTests;
+			productName = LeaksTests;
+			productReference = 5C7EADBB1A8C46E8001438E2 /* LeaksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C7EAD9A1A8C46E8001438E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Sash Zats";
+				TargetAttributes = {
+					5C7EADA11A8C46E8001438E2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					5C7EADBA1A8C46E8001438E2 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 5C7EADA11A8C46E8001438E2;
+					};
+				};
+			};
+			buildConfigurationList = 5C7EAD9D1A8C46E8001438E2 /* Build configuration list for PBXProject "Leaks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C7EAD991A8C46E8001438E2;
+			productRefGroup = 5C7EADA31A8C46E8001438E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C7EADA11A8C46E8001438E2 /* Leaks */,
+				5C7EADBA1A8C46E8001438E2 /* LeaksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C7EADA01A8C46E8001438E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7EADB11A8C46E8001438E2 /* Main.storyboard in Resources */,
+				5C7EADB61A8C46E8001438E2 /* LaunchScreen.xib in Resources */,
+				5C7EADB31A8C46E8001438E2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7EADB91A8C46E8001438E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C7EAD9E1A8C46E8001438E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7EADAB1A8C46E8001438E2 /* AppDelegate.m in Sources */,
+				5C7EADE51A8CED87001438E2 /* _LeaksInspectorContext.m in Sources */,
+				5C7EADA81A8C46E8001438E2 /* main.m in Sources */,
+				5C7EADD81A8CB605001438E2 /* LeaksInstrument.m in Sources */,
+				5C7EADDE1A8CCD74001438E2 /* LeakingViewController.m in Sources */,
+				5C7EADEB1A8CF25C001438E2 /* LeaksSession.m in Sources */,
+				5C7EADD01A8C4F57001438E2 /* RootViewController.m in Sources */,
+				5C7EADE11A8CCDDA001438E2 /* NotLeakingViewController.m in Sources */,
+				5C7EADD91A8CB605001438E2 /* LeaksInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7EADB71A8C46E8001438E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7EADDB1A8CCCD2001438E2 /* LeaksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C7EADBD1A8C46E8001438E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7EADA11A8C46E8001438E2 /* Leaks */;
+			targetProxy = 5C7EADBC1A8C46E8001438E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C7EADAF1A8C46E8001438E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7EADB01A8C46E8001438E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C7EADB41A8C46E8001438E2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7EADB51A8C46E8001438E2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C7EADC31A8C46E8001438E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C7EADC41A8C46E8001438E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C7EADC61A8C46E8001438E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Leaks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C7EADC71A8C46E8001438E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Leaks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5C7EADC91A8C46E8001438E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LeaksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leaks.app/Leaks";
+			};
+			name = Debug;
+		};
+		5C7EADCA1A8C46E8001438E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LeaksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leaks.app/Leaks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C7EAD9D1A8C46E8001438E2 /* Build configuration list for PBXProject "Leaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7EADC31A8C46E8001438E2 /* Debug */,
+				5C7EADC41A8C46E8001438E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7EADC51A8C46E8001438E2 /* Build configuration list for PBXNativeTarget "Leaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7EADC61A8C46E8001438E2 /* Debug */,
+				5C7EADC71A8C46E8001438E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7EADC81A8C46E8001438E2 /* Build configuration list for PBXNativeTarget "LeaksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7EADC91A8C46E8001438E2 /* Debug */,
+				5C7EADCA1A8C46E8001438E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C7EAD9A1A8C46E8001438E2 /* Project object */;
+}

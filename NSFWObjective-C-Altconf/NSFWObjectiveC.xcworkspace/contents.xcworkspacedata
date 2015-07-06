@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Lab/Lab.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Xray/Xray.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zats/Documents/NSFWObjective-C/CF-Toll-Free-Bridging/Toll-Free-Bridging.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zats/Documents/NSFWObjective-C/InAppDebuggerExampe/In-App-Debugger.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Generational-Analysis-master/Leaks.xcodeproj">
+   </FileRef>
+</Workspace>

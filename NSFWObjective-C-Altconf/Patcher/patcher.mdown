@@ -1,0 +1,619 @@
+/*
+
+0. Test, test, test!
+1. Make sure patch works on different devices
+
+*/
+
+
+void -[PHFetchResultChangeDetails enumerateMovesWithBlock:](void * self, void * _cmd, void * arg_8) {
+    esi = [arg_8 retain];
+    [self calculateDiffs];
+    ecx = self;
+    edi = ecx->_movedIndexes;
+    if (edi != 0x0) {
+            var_20 = 0x0;
+            var_1C = var_20;
+            var_18 = 0x20000000;
+            var_14 = 0x14;
+            var_10 = 0x0;
+            var_40 = *_NSConcreteStackBlock;
+            var_3C = 0xc2000000;
+            var_38 = 0x0;
+            var_34 = ___54-[PHFetchResultChangeDetails enumerateMovesWithBlock:]_block_invoke;
+            var_30 = ___block_descriptor_tmp;
+            var_2C = [ecx retain];
+            var_24 = var_20;
+            var_28 = [esi retain];
+            [edi enumerateIndexesUsingBlock:var_40];
+            [var_28 release];
+            [var_2C release];
+            _Block_object_dispose(var_20, 0x8);
+    }
+    [esi release];    
+    return;
+}
+
+
+int ___54-[PHFetchResultChangeDetails enumerateMovesWithBlock:]_block_invoke(int arg0, int arg1) {
+    eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._movedFromIndexes;
+    ecx = *(arg_0 + 0x14);
+    edx = *(arg_0 + 0x1c);
+    eax = *(ecx + eax);
+    ecx = *(edx + 0x4);
+    edx = *(ecx + 0x10);
+    *(ecx + 0x10) = edx + 0x1;
+    eax = CFArrayGetValueAtIndex(eax, edx);
+    ecx = *(arg_0 + 0x18);
+    (*(ecx + 0xc))(ecx, eax, arg_4);
+    return eax;
+}
+
+
+void -[PHFetchResultChangeDetails calculateDiffs](void * self, void * _cmd) {
+    edi = self;
+    if ((edi->_skipIncrementalChanges == 0x0) && (edi->_currentItems == 0x0)) {
+            esi = *_OBJC_IVAR_$_PHFetchResultChangeDetails._currentItems;
+            eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._fetchResultAfterChanges;
+            eax = *(edi + eax);
+            eax = [eax fetchedObjects];
+            eax = [eax retain];
+            ecx = *(edi + esi);
+            *(edi + esi) = eax;
+            [ecx release];
+            ecx = *_OBJC_IVAR_$_PHFetchResultChangeDetails._previousItems;
+            ecx = *(edi + ecx);
+            var_28 = @selector(_oidsForPHObjects:);
+            var_24 = [[PHFetchResultChangeDetails _oidsForPHObjects:ecx] retain];
+            eax = [PHFetchResultChangeDetails _oidsForPHObjects:*(edi + esi)];
+            eax = [eax retain];
+            var_28 = eax;
+            var_10 = 0x0;
+            edx = edi->_changedItems;
+            var_14 = 0x0;
+            var_18 = 0x0;
+            var_1C = 0x0;
+            var_20 = 0x0;
+            diffArrays(var_24, eax, edx, var_14, var_18, var_1C, var_10, var_20);
+            esi = [var_14 retain];
+            var_34 = [var_18 retain];
+            var_38 = [var_1C retain];
+            var_30 = [var_20 retain];
+            eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._removedIndexes;
+            var_3C = *(edi + eax);
+            *(edi + eax) = esi;
+            var_2C = [esi retain];
+            [var_3C release];
+            eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._insertedIndexes;
+            esi = *(edi + eax);
+            *(edi + eax) = var_34;
+            var_34 = [var_34 retain];
+            [esi release];
+            eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._movedIndexes;
+            esi = *(edi + eax);
+            *(edi + eax) = var_38;
+            var_38 = [var_38 retain];
+            [esi release];
+            edi->_movedFromIndexes = var_10;
+            eax = *_OBJC_IVAR_$_PHFetchResultChangeDetails._changedIndexes;
+            ecx = *(edi + eax);
+            *(edi + eax) = var_30;
+            [ecx release];
+            [var_38 release];
+            [var_34 release];
+            [var_2C release];
+            [var_28 release];
+            [var_24 release];
+    }
+    return;
+}
+
+
+
+int _diffArrays(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    eax = *__stack_chk_guard;
+    var_74 = eax;
+    var_10 = *eax;
+    *arg_C = 0x0;
+    *arg_10 = 0x0;
+    *arg_14 = 0x0;
+    *arg_18 = 0x0;
+    *arg_1C = 0x0;
+    var_78 = objc_autoreleasePoolPush();
+    var_64 = @selector(count);
+    eax = [arg_4 count];
+    var_48 = eax;
+    edi = eax;
+    esi = [arg_0 count];
+    var_50 = esi;
+    var_3C = esi + edi << 0x2;
+    var_40 = @selector(dataWithLength:);
+    eax = [NSMutableData dataWithLength:esi + edi << 0x2];
+    var_44 = @selector(mutableBytes);
+    eax = [eax mutableBytes];
+    var_4C = eax;
+    edx = esi;
+    var_68 = eax + edx * 0x4;
+    var_6C = @selector(getObjects:range:);
+    [arg_0 getObjects:eax range:0x0];
+    [arg_4 getObjects:var_68 range:0x0];
+    eax = [NSMutableData dataWithLength:var_3C];
+    ecx = var_44;
+    edi = ebx;
+    var_44 = objc_msgSend(eax, ecx);
+    var_40 = edi + 0x217f49;
+    qsort_b(var_4C, var_50, 0x4, edi + 0x217f49);
+    ebx = var_48;
+    qsort_b(var_68, ebx, 0x4, edi + 0x217f49);
+    eax = var_50;
+    esp = ((((((((((esp - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x20) + 0x20 - 0x20) + 0x20 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10;
+    var_3C = 0x0;
+    if (eax == 0x0) goto loc_17896a;
+
+loc_1788a8:
+    esi = ebx;
+    if (ebx == 0x0) goto loc_178972;
+
+loc_1788b2:
+    var_60 = 0x0;
+    ecx = 0x0;
+    edx = 0x0;
+    ebx = edi;
+    goto loc_1788bf;
+
+loc_1788bf:
+    var_58 = ebx;
+    edi = ecx;
+    goto loc_1788c4;
+
+loc_1788c4:
+    var_5C = edx;
+    var_54 = edx + eax;
+    ecx = edi;
+    goto loc_1788cf;
+
+loc_1788cf:
+    esi = eax;
+    eax = *(var_4C + ecx * 0x4);
+    edi = *(var_4C + var_54 * 0x4);
+    ebx = eax <= edi ? 0x1 : 0x0;
+    edx = eax - edi;
+    if ((edx >= 0x0) || (ebx == 0x0)) goto loc_178906;
+
+loc_1788f0:
+    *(var_44 + var_3C * 0x4) = eax;
+    var_3C = var_3C + 0x1;
+    ecx = ecx + 0x1;
+    eax = esi;
+    if (ecx < eax) goto loc_1788cf;
+
+loc_17895c:
+    edi = var_60;
+    ebx = var_58;
+    esi = var_48;
+    edx = var_5C;
+    goto loc_17897a;
+
+loc_17897a:
+    if (ecx < eax) {
+            var_5C = edx;
+            var_54 = edi;
+            var_48 = esi;
+            var_50 = eax;
+            edx = eax + var_3C - ecx;
+            esi = eax - ecx;
+            edi = var_44 + var_3C * 0x4;
+            ecx = var_4C + ecx * 0x4;
+            do {
+                    *edi = *ecx;
+                    edi = edi + 0x4;
+                    ecx = ecx + 0x4;
+                    esi = esi - 0x1;
+            } while (esi != 0x0);
+            var_3C = edx;
+            esi = var_48;
+            edi = var_54;
+            edx = var_5C;
+    }
+    else {
+            var_50 = eax;
+    }
+    if (edx < esi) {
+            var_54 = esi + edi - edx;
+            ecx = edx;
+            var_48 = esi;
+            edx = esi - ecx;
+            esi = var_44 + (edi + var_50) * 0x4;
+            eax = var_4C + (ecx + var_50) * 0x4;
+            do {
+                    *esi = *eax;
+                    esi = esi + 0x4;
+                    eax = eax + 0x4;
+                    edx = edx - 0x1;
+            } while (edx != 0x0);
+            edi = var_54;
+            esi = var_48;
+    }
+    var_70 = 0x0;
+    if (var_3C != 0x0) {
+            var_54 = edi;
+            var_48 = esi;
+            [arg_0 getObjects:var_4C range:0x0];
+            var_58 = ebx;
+            eax = [NSMutableIndexSet indexSet];
+            esp = ((esp - 0x20) + 0x20 - 0x10) + 0x10;
+            ebx = eax;
+            if (var_50 != 0x0) {
+                    edi = 0x0;
+                    var_5C = *(var_58 + 0x26870d);
+                    esi = var_4C;
+                    do {
+                            eax = bsearch_b(esi, var_44, var_3C, 0x4, var_40);
+                            esp = (esp - 0x20) + 0x20;
+                            if (eax != 0x0) {
+                                    objc_msgSend(ebx, var_5C, edi);
+                                    esp = (esp - 0x10) + 0x10;
+                            }
+                            edi = edi + 0x1;
+                            esi = esi + 0x4;
+                    } while (var_50 != edi);
+            }
+            *arg_C = ebx;
+            eax = *(var_58 + 0x267ec5);
+            stack[32] = ebx;
+            ebx = var_58;
+            objc_msgSend(stack[32], eax);
+            eax = *(ebx + 0x2689fd);
+            eax = objc_msgSend(arg_0, eax);
+            eax = objc_msgSend(eax, *(ebx + 0x26804d));
+            var_70 = eax;
+            objc_msgSend(eax, *(ebx + 0x2697b9), *arg_C);
+            esp = ((((esp - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10;
+            esi = var_48;
+            edi = var_54;
+    }
+    [arg_4 getObjects:var_68 range:0x0];
+    esp = (esp - 0x20) + 0x20;
+    if (edi != 0x0) {
+            var_7C = esp;
+            var_54 = edi;
+            var_60 = esp - (edi * 0x4 + 0xf & 0xfffffff0);
+            var_58 = ebx;
+            eax = [NSMutableIndexSet indexSet];
+            esp = (0x10 - esp - (edi * 0x4 + 0xf & 0xfffffff0)) + 0x10;
+            var_5C = eax;
+            edi = 0x0;
+            var_48 = esi;
+            if (esi != 0x0) {
+                    var_3C = var_44 + var_50 * 0x4;
+                    var_44 = *(var_58 + 0x26870d);
+                    esi = var_4C + var_50 * 0x4;
+                    edi = 0x0;
+                    ebx = 0x0;
+                    do {
+                            eax = bsearch_b(esi, var_3C, var_54, 0x4, var_40);
+                            esp = (esp - 0x20) + 0x20;
+                            if (eax != 0x0) {
+                                    objc_msgSend(var_5C, var_44, ebx);
+                                    esp = (esp - 0x10) + 0x10;
+                                    *(var_60 + edi * 0x4) = *esi;
+                                    edi = edi + 0x1;
+                            }
+                            ebx = ebx + 0x1;
+                            esi = esi + 0x4;
+                    } while (var_48 != ebx);
+            }
+            *arg_10 = var_5C;
+            ebx = var_58;
+            eax = *(ebx + 0x267ec5);
+            objc_msgSend(var_5C, eax);
+            esp = (esp - 0x10) + 0x10;
+            eax = var_70;
+            if (eax == 0x0) {
+                    eax = [arg_0 mutableCopy];
+                    eax = [eax autorelease];
+                    esp = ((esp - 0x10) + 0x10 - 0x10) + 0x10;
+            }
+            esi = eax;
+            eax = [NSArray arrayWithObjects:var_60 count:edi];
+            [esi insertObjects:eax atIndexes:*arg_10];
+            eax = esi;
+            esp = var_7C;
+    }
+    else {
+            var_48 = esi;
+            eax = var_70;
+    }
+    esi = arg_0;
+    if (eax != 0x0) {
+            var_70 = eax;
+            esi = [eax count];
+            eax = [arg_4 count];
+            esp = ((esp - 0x10) + 0x10 - 0x10) + 0x10;
+            if (esi != eax) {
+                    var_3C = [NSAssertionHandler currentHandler];
+                    edi = [NSString stringWithUTF8String:"void diffArrays(NSArray *, NSArray *, NSArray *, NSIndexSet **, NSIndexSet **, NSIndexSet **, CFArrayRef *, NSIndexSet **)"];
+                    eax = [NSString stringWithUTF8String:"/SourceCache/PhotoLibraryServices_Sim/MobileSlideShow-2380.161/Sources/NSArrayAdditions.m"];
+                    [var_3C handleFailureInFunction:edi file:eax lineNumber:0x13b description:@"Mismatched value counts after additions and subtractions."];
+                    esp = ((((esp - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x20) + 0x20;
+            }
+            esi = var_70;
+    }
+    var_58 = ebx;
+    eax = [esi count];
+    esp = (esp - 0x10) + 0x10;
+    var_3C = eax;
+    var_60 = esp;
+    edi = 0x1;
+    ecx = eax;
+    if (eax == 0x0) {
+            edi = 0x1;
+            ecx = edi;
+    }
+    if (eax < 0x201) {
+            edi = ecx;
+    }
+    edx = esp - (edi * 0x4 + 0xf & 0xfffffff0);
+    esp = edx;
+    if (eax <= 0x200) {
+            bzero(edx, edi << 0x2);
+            ecx = edx;
+            esp = (esp - 0x10) + 0x10;
+    }
+    else {
+            eax = NSAllocateScannedUncollectable(ecx << 0x2);
+            esp = (esp - 0x10) + 0x10;
+            ecx = eax;
+    }
+    ebx = var_58;
+    stack[32] = esi;
+    esi = ecx;
+    [stack[32] getObjects:ecx range:0x0];
+    eax = *(ebx + 0x26d1d1);
+    ecx = *(ebx + 0x26a2c1);
+    var_70 = ecx;
+    var_58 = ebx;
+    eax = objc_msgSend(eax, ecx);
+    edx = esi;
+    esp = ((esp - 0x20) + 0x20 - 0x10) + 0x10;
+    var_44 = eax;
+    if (var_3C != 0x0) {
+            var_54 = *(var_58 + 0x26870d);
+            esi = var_4C + var_50 * 0x4;
+            ebx = 0x0;
+            do {
+                    if (*(esi + ebx * 0x4) != *(edx + ebx * 0x4)) {
+                            objc_msgSend(var_44, var_54, ebx);
+                            edx = edx;
+                            esp = (esp - 0x10) + 0x10;
+                    }
+                    ebx = ebx + 0x1;
+            } while (var_3C != ebx);
+    }
+    var_5C = edx;
+    esi = var_44;
+    eax = [esi count];
+    esp = (esp - 0x10) + 0x10;
+    if (eax != 0x0) {
+            *arg_14 = objc_msgSend(esi, *(var_58 + 0x268049));
+            eax = [esi count];
+            eax = CFArrayCreateMutable(0x0, eax, var_58 + 0x217f5d);
+            *arg_18 = eax;
+            ecx = *arg_14;
+            var_38 = *(var_58 + 0x20a9cd);
+            var_34 = 0xc2000000;
+            var_30 = 0x0;
+            var_2C = var_58 + 0xd1f;
+            var_28 = var_58 + 0x217f91;
+            var_24 = var_44;
+            var_20 = var_68;
+            var_1C = var_5C;
+            var_18 = eax;
+            eax = *(var_58 + 0x26a0fd);
+            objc_msgSend(ecx, eax, var_38);
+            ebx = CFArrayGetCount(*arg_18);
+            eax = *arg_14;
+            eax = [eax count];
+            esp = ((((((esp - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10;
+            if (ebx != eax) {
+                    var_44 = objc_msgSend(*(var_58 + 0x26d0f9), *(var_58 + 0x267f3d));
+                    eax = *(var_58 + 0x26d0fd);
+                    esi = *(var_58 + 0x267f41);
+                    ebx = objc_msgSend(eax, esi, var_58 + 0x14aca2);
+                    eax = *(var_58 + 0x26d0fd);
+                    eax = objc_msgSend(eax, esi, var_58 + 0x14ad1d);
+                    objc_msgSend(var_44, *(var_58 + 0x268651), ebx, eax, 0x171, var_58 + 0x22f005);
+                    esp = ((((esp - 0x10) + 0x10 - 0x10) + 0x10 - 0x10) + 0x10 - 0x20) + 0x20;
+            }
+    }
+    if (var_3C >= 0x201) {
+            NSZoneFree(0x0, var_5C);
+    }
+    ebx = var_64;
+    esi = arg_8;
+    eax = objc_msgSend(esi, ebx);
+    esp = (var_60 - 0x10) + 0x10;
+    edi = arg_10;
+    if (eax == 0x0) goto loc_1792f5;
+
+loc_1790f4:
+    eax = objc_msgSend(esi, ebx);
+    esp = (esp - 0x10) + 0x10;
+    ebx = eax;
+    var_68 = esp;
+    eax = 0x1;
+    ecx = ebx;
+    if (ebx == 0x0) {
+            eax = 0x1;
+            ecx = eax;
+    }
+    if (ebx < 0x201) {
+            eax = ecx;
+    }
+    edi = esp - (eax * 0x4 + 0xf & 0xfffffff0);
+    esp = edi;
+    if (ebx <= 0x200) {
+            bzero(edi, eax << 0x2);
+            esp = (esp - 0x10) + 0x10;
+    }
+    else {
+            eax = NSAllocateScannedUncollectable(ecx << 0x2);
+            esp = (esp - 0x10) + 0x10;
+            edi = eax;
+    }
+    var_44 = edi;
+    var_60 = ebx;
+    [esi getObjects:edi range:0x0];
+    qsort_b(edi, ebx, 0x4, var_40);
+    eax = *(var_58 + 0x26d1d1);
+    eax = objc_msgSend(eax, var_70);
+    esp = (((esp - 0x20) + 0x20 - 0x10) + 0x10 - 0x10) + 0x10;
+    esi = edi;
+    edi = arg_10;
+    if (var_48 == 0x0) goto loc_1792d3;
+
+loc_1791db:
+    var_54 = eax;
+    var_5C = @selector(addIndex:);
+    ebx = var_4C + var_50 * 0x4;
+    edi = 0x0;
+    var_3C = 0x0;
+    ecx = var_60;
+    goto loc_1791fc;
+
+loc_1791fc:
+    stack[31] = esi;
+    esi = ecx;
+    eax = bsearch_b(ebx, stack[31], ecx, 0x4, var_40);
+    esp = (esp - 0x20) + 0x20;
+    if (eax == 0x0) goto loc_179252;
+
+loc_179227:
+    [var_54 addIndex:edi];
+    esp = (esp - 0x10) + 0x10;
+    var_3C = var_3C + 0x1;
+    ecx = esi;
+    if (var_3C + 0x1 != esi) goto loc_179254;
+
+loc_179262:
+    var_3C = ecx;
+    esi = var_44;
+    goto loc_179268;
+
+loc_179268:
+    var_60 = ecx;
+    edi = arg_10;
+    if (var_3C != 0x0) {
+            eax = *edi;
+            eax = [eax count];
+            esp = (esp - 0x10) + 0x10;
+            if (eax != 0x0) {
+                    eax = *edi;
+                    [var_54 removeIndexes:eax];
+                    esp = (esp - 0x10) + 0x10;
+            }
+            eax = [var_54 retain];
+            esp = (esp - 0x10) + 0x10;
+            *arg_1C = eax;
+    }
+    goto loc_1792d3;
+
+loc_1792d3:
+    if (var_60 >= 0x201) {
+            NSZoneFree(0x0, esi);
+    }
+    esp = var_68;
+    goto loc_1792f5;
+
+loc_1792f5:
+    objc_autoreleasePoolPop(var_78);
+    eax = *arg_C;
+    esi = *(var_58 + 0x26804d);
+    objc_msgSend(eax, esi);
+    eax = *edi;
+    objc_msgSend(eax, esi);
+    eax = *arg_14;
+    objc_msgSend(eax, esi);
+    eax = *arg_18;
+    objc_msgSend(eax, esi);
+    eax = *arg_1C;
+    objc_msgSend(eax, esi);
+    if (*var_74 != var_10) {
+            __stack_chk_fail();
+    }
+    return eax;
+
+loc_179254:
+    edi = edi + 0x1;
+    ebx = ebx + 0x4;
+    esi = var_44;
+    if (edi < var_48) goto loc_1791fc;
+    goto loc_179268;
+
+loc_179252:
+    ecx = esi;
+    goto loc_179254;
+
+loc_178906:
+    if (edx > 0x0) goto loc_178927;
+
+loc_17890a:
+    edi = ecx + 0x1;
+    edx = var_5C + 0x1;
+    eax = esi;
+    esi = var_48;
+    if ((edi >= eax) || (edx >= esi)) goto loc_179396;
+    goto loc_1788c4;
+
+loc_179396:
+    ecx = ecx + 0x1;
+    edi = var_60;
+    ebx = var_58;
+    goto loc_17897a;
+
+loc_178927:
+    var_54 = var_60 + 0x1;
+    eax = esi;
+    *(var_44 + (var_60 + eax) * 0x4) = edi;
+    edx = var_5C + 0x1;
+    ebx = var_58;
+    esi = var_48;
+    if (ecx >= eax) goto loc_1793a2;
+
+loc_17894c:
+    edi = var_54;
+    var_60 = edi;
+    if (edx < esi) goto loc_1788bf;
+    goto loc_17897a;
+
+loc_1793a2:
+    edi = var_54;
+    goto loc_17897a;
+
+loc_178972:
+    edx = 0x0;
+    ecx = 0x0;
+    goto loc_178976;
+
+loc_178976:
+    ebx = edi;
+    edi = 0x0;
+    goto loc_17897a;
+
+loc_17896a:
+    edx = 0x0;
+    ecx = 0x0;
+    esi = ebx;
+    goto loc_178976;
+}
+
+
+typedef void(*diff_arrays_t)(NSArray *arg0, NSArray *arg1, NSArray *arg2, NSIndexSet **arg3, NSIndexSet **arg4, NSIndexSet **arg5, NSArray **arg6, NSIndexSet **arg7);
+static diff_arrays_t original_diffArrays;
+static void patched_diffArrays(NSArray *arg0, NSArray *arg1, NSArray *arg2, NSIndexSet **arg3, NSIndexSet **arg4, NSIndexSet **arg5, NSArray **arg6, NSIndexSet **arg7) {
+    original_diffArrays(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+    if (arg6 && *arg6) {
+        *arg6 = CFRetain((__bridge CFTypeRef)(*arg6));
+    }
+
+}
