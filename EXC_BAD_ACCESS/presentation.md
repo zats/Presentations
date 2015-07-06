@@ -1,6 +1,6 @@
 ![inline](assets/exc_bad_access.png)
 
-:tada:
+^ My talk is about fixing problems in 3rd-party code
 
 ---
 
@@ -17,6 +17,10 @@
 ![inline](assets/me.jpg)
 
 ^ This happened 3 days ago.
+
+^ Yeah...
+
+^ I'm still trying to get a hairdresser appointment 
 
 ---
 
@@ -48,7 +52,7 @@
 
 ![](assets/swift-foundation.png)
 
-^ Swift the way we run carries a lot of legacy.
+^ Swift, the way we run it today, carries a big legacy.
 
 ^ It has a very familiar foundation: Cocoa (Touch or not)
 
@@ -82,7 +86,7 @@ Dir[frameworks_dir].each { |file|
 
 [^1]: This slide is intentionally left blank
 
-^ This is the list of frameworks built with Swift
+^ This is the list of system frameworks built with Swift
 
 ^ It means we have to learn to co-exist with these "legacy" frameworks.
 
@@ -96,7 +100,9 @@ Dir[frameworks_dir].each { |file|
 
 ^ Your users don't care if it's Apple's fault.
 
-^ They don't even know what `radar` is.
+^ They don't even know what `radar` is. 
+
+^ Apple doesn't share the bugfix roadmap, so it is up to us to workaround existen bugs in the meantime.
 
 ^ Let's take a look at what we might have to deal with.
 
@@ -113,6 +119,31 @@ Dir[frameworks_dir].each { |file|
 ^ Let's take a look at UIKitty. It's like Instagram but for sharing a single picture of a cat.
 
 ^ `D E M O`
+
+---
+
+```swift
+if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
+    let block: @objc_block (AspectInfo) -> Void = { (aspectInfo) in
+        if let view = aspectInfo.instance() as? UIView {
+            view.frame.size.height = view.superview!.frame.height - 44
+        }
+    }
+	let blockObject = unsafeBitCast(block, AnyObject.self)
+    (cls as AnyObject).aspect_hookSelector(
+    	Selector("layoutSubviews"), 
+    	withOptions: .PositionAfter, 
+    	usingBlock: blockObject, 
+    	error: nil
+    )
+}
+```
+
+^ First let's make sure the class exists
+
+^ Then our patch is simply calculates the right height
+
+^ Lastly, we make sure it's called every time `layoutSubviews` has been called on the original view
 
 ---
 
@@ -240,15 +271,7 @@ Dir[frameworks_dir].each { |file|
 
 ```c
 diffArrays(var_24, eax, edi->_changedItems, nil, nil, nil, nil, nil);
-```
 
-^ Until you find the function call that actually causes troubles.
-
-^ In this particular case it is a static C function, so we can not apply swizzling from the previous example.
-
----
-
-```c
 void diffArrays(NSArray <NSManagedObject *> *arg0,
                 NSArray <NSManagedObject *> *arg1,
                 NSArray <NSManagedObject *> *arg2,
@@ -259,28 +282,13 @@ void diffArrays(NSArray <NSManagedObject *> *arg0,
                 NSIndexSet **arg7);
 ```
 
-^ A bit more digging and you might figure out the signature of the arguments.
+^ Until you find the function call that actually causes troubles.
+
+^ In this particular case it is a static C function, so we can not apply swizzling from the previous example.
 
 ^ This method that takes CoreData objects, representing your photo library and returns permutations of IndexSets for deletion, insertion or simply moving the pictures around.
 
 ^ By the way, how do you like neat Objective-C generics syntax? Especially `arg6`.
-
-^ Being a C function, this is what it would look...
-
----
-
-```swift
-diffArrays(arg0: [NSManagedObject]!, 
-		   arg1: [NSManagedObject]!, 
-		   arg2: [NSManagedObject]!, 
-		   arg3: AutoreleasingUnsafeMutablePointer<NSIndexSet?>, 
-		   arg4: AutoreleasingUnsafeMutablePointer<NSIndexSet?>, 
-		   arg5: AutoreleasingUnsafeMutablePointer<NSIndexSet?>, 
-		   arg6: AutoreleasingUnsafeMutablePointer<NSArray?>, 
-		   arg7: AutoreleasingUnsafeMutablePointer<NSIndexSet?>)
-```
-
-^ ...as a Swift function
 
 ^ Now the easiest part...
 
@@ -294,7 +302,50 @@ diffArrays(arg0: [NSManagedObject]!,
 
 ^ Now this is a tedious process and there is no recipe. Same as debugging unfamiliar codebase.
 
-^ `D E M O` of working patch
+^ `D E M O` of working patch & code
+
+---
+
+
+```swift
+// Internal structures
+struct swift_func_wrapper {
+    var trampolinePtr: UnsafeMutablePointer<uintptr_t>
+    var functionObject: UnsafeMutablePointer<swift_func_object>
+}
+struct swift_func_object {
+    var original_type_ptr: UnsafeMutablePointer<uintptr_t>
+    var unknown: UnsafeMutablePointer<UInt64>
+    var address: uintptr_t
+    var selfPtr: UnsafeMutablePointer<uintptr_t>
+}
+
+// Method we want to call
+func hello(world: String) -> Void
+typedef helloFn = (String) -> Void
+
+// The C function pointer
+let fn = UnsafeMutablePointer<helloFn>.alloc(1)
+fn.initialize(hello)
+let fnWrapper = UnsafeMutablePointer<swift_func_wrapper>(fn)
+let opaque = COpaquePointer(bitPattern: fnWrapper.memory.functionObject.memory.address)
+let cFunction = CFunctionPointer<helloFn>(opaque)
+```
+
+---
+
+```swift
+let fnPointer = UnsafeMutablePointer<DiffArraysFn>.alloc(1)
+fnPointer.initialize(myDiffArrays)
+let wrapperPtr = UnsafeMutablePointer<swift_func_wrapper>(fnPointer)
+let opaque = COpaquePointer(bitPattern: wrapperPtr.memory.functionObject.memory.function_address)
+let cFunction = CFunctionPointer<DiffArraysFn>(opaque)
+
+var r = rebinding()
+r.name = "diffArrays".cString
+r.replacement = unsafeBitCast(cFunction, UnsafeMutablePointer<Void>.self)
+rebind_symbols(&r, 1);
+```
 
 ---
 
@@ -342,5 +393,3 @@ diffArrays(arg0: [NSManagedObject]!,
 # Questions?
 
 ![inline](http://www.reactiongifs.com/r/jck.gif)
-
----
