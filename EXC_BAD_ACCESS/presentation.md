@@ -324,7 +324,7 @@ struct swift_func_object {
 func hello(world: String) -> Void
 typedef helloFn = (String) -> Void
 
-// The C function pointer
+// C function pointer
 let fn = UnsafeMutablePointer<helloFn>.alloc(1)
 fn.initialize(hello)
 let fnWrapper = UnsafeMutablePointer<swift_func_wrapper>(fn)
@@ -335,16 +335,44 @@ let cFunction = CFunctionPointer<helloFn>(opaque)
 ---
 
 ```swift
-let fnPointer = UnsafeMutablePointer<DiffArraysFn>.alloc(1)
-fnPointer.initialize(myDiffArrays)
-let wrapperPtr = UnsafeMutablePointer<swift_func_wrapper>(fnPointer)
-let opaque = COpaquePointer(bitPattern: wrapperPtr.memory.functionObject.memory.function_address)
-let cFunction = CFunctionPointer<DiffArraysFn>(opaque)
+// Internal structures
 
-var r = rebinding()
-r.name = "diffArrays".cString
-r.replacement = unsafeBitCast(cFunction, UnsafeMutablePointer<Void>.self)
-rebind_symbols(&r, 1);
+struct swift_func_wrapper {
+    var trampolinePtr: UnsafeMutablePointer<uintptr_t>
+    var functionObject: UnsafeMutablePointer<swift_func_object>
+}
+
+struct swift_func_object {
+    var original_type_ptr: UnsafeMutablePointer<uintptr_t>
+    var unknown: UnsafeMutablePointer<UInt64>
+    var address: uintptr_t
+    var selfPtr: UnsafeMutablePointer<uintptr_t>
+}
+```
+
+---
+
+```swift
+// Method we want to call
+
+func hello(world: String) -> Void {
+	print("Hello, \(world)")
+}
+
+typedef helloFn = (String) -> Void
+```
+
+---
+
+```swift
+// C function pointer
+
+let fn = UnsafeMutablePointer<helloFn>.alloc(1)
+fn.initialize(hello)
+let fnWrapper = UnsafeMutablePointer<swift_func_wrapper>(fn)
+let address = fnWrapper.memory.functionObject.memory.address
+let opaque = COpaquePointer(bitPattern: address)
+let cFunction = CFunctionPointer<helloFn>(opaque)
 ```
 
 ---
