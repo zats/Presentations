@@ -301,7 +301,7 @@ void diffArrays(NSArray <NSManagedObject *> *arg0,
 
 ^ To figure out what is crashing
 
-^ Now this is a tedious process and there is no recipe. Same as debugging unfamiliar codebase.
+^ This is a tedious process and there is no recipe. Same as debugging unfamiliar codebase.
 
 ^ `D E M O` of working patch & code
 
@@ -332,6 +332,8 @@ let fnWrapper = UnsafeMutablePointer<swift_func_wrapper>(fn)
 let opaque = COpaquePointer(bitPattern: fnWrapper.memory.functionObject.memory.address)
 let cFunction = CFunctionPointer<helloFn>(opaque)
 ```
+
+^ This is the exact technique I used in my patch. Except for the method itself
 
 ---
 
@@ -397,7 +399,7 @@ let cFunction = CFunctionPointer<helloFn>(opaque)
 
 ^ Use fishhook to replace functions
 
-^ This is the only part that is impossible in Swift 1.2 - can't call a C function from the pointer
+^ This is the only part that is impossible in Swift 1.2 - can't call a C function from the pointer. Sadly, for this method we have to call the original implementation. This is something I had to do in Objective-C.
 
 
 ---
