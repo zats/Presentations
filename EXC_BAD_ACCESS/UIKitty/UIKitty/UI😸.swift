@@ -18,13 +18,13 @@ class UI😸 : NSObject {
     }
     
     private static func patchSearchingViewHeight() {
-        if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
+        if let cls: AnyObject = NSClassFromString("UIPrinterSearchingView") {
             let block: @objc_block (AspectInfo) -> Void = { (aspectInfo) in
                 if let view = aspectInfo.instance() as? UIView {
                     view.frame.size.height = view.superview!.frame.height - 44
                 }
             }
-            (cls as AnyObject).aspect_hookSelector(Selector("layoutSubviews"), withOptions: .PositionAfter, usingBlock: unsafeBitCast(block, AnyObject.self), error: nil)
+            cls.aspect_hookSelector(Selector("layoutSubviews"), withOptions: .PositionAfter, usingBlock: unsafeBitCast(block, AnyObject.self), error: nil)
         }
     }
 }
