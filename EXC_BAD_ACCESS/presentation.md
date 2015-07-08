@@ -112,25 +112,27 @@ Dir[frameworks_dir].each { |file|
 
 ![inline](assets/tumblr_np11h0spSh1uos43lo1_400.gif)
 
+^ About this demo
+
 ^ Let's start with something simple: visual bugs.
 
 ^ Sadly, I don't have a real-life example.
 
-^ Let's take a look at UIKitty. It's like Instagram but for sharing a single picture of a cat.
+^ Let's take a look at UIKitty. It's an app just like Instagram but for sharing of a single picture of a cat.
 
 ^ `D E M O`
 
 ---
 
 ```swift
-if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
+if let cls = NSClassFromString("UIPrinterSearchingView") {
     let block: @objc_block (AspectInfo) -> Void = { (aspectInfo) in
         if let view = aspectInfo.instance() as? UIView {
             view.frame.size.height = view.superview!.frame.height - 44
         }
     }
 	let blockObject = unsafeBitCast(block, AnyObject.self)
-    (cls as AnyObject).aspect_hookSelector(
+    cls.aspect_hookSelector(
     	Selector("layoutSubviews"), 
     	withOptions: .PositionAfter, 
     	usingBlock: blockObject, 
@@ -139,31 +141,30 @@ if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
 }
 ```
 
-^ First let's make sure the class exists
+^ Making sure the class exist
 
-^ Then our patch is simply calculates the right height
+^ For simplicity our patch simply takes superview height and subtracts navigation bar height `44pt` 
 
-^ Lastly, we make sure it's called every time `layoutSubviews` has been called on the original view
+^ Lastly, we make sure it's called after original `layoutSubviews`.
 
 ---
 
 # Swizzling
 
 0. Swizzling is still possible in Swift.
-0. Aspect oriented programming.
 0. Set applicable OS versions for the patch.
 0. Test extensively. On device!
+0. Aspect oriented programming.
 
 ^ Basically, swizzling is replacing methods during runtime without callers knowing that you swapped the implementation.
 
 ^ 1. You can swizzle 3rd party frameworks, even with `-O` enabled
 
-^ 2. When you want to apply a hack across all the 
+^ 2. Transition like iOS 6 - iOS 7 might easily break your patches, minor version are probably fine.
 
-^ 3. Transition like iOS 6 - iOS 7 might easily break your patches, minor version are probably fine.
+^ 3. Certain features are implemented differently on simulator and device. Always test on real device!
 
-^ 4. Certain features are implemented differently on simulator and device. Always test on real device!
-
+^ 4. Same can be done with a regular swizzling. Aspect oriented programming: analytics etc
 
 ---
 
@@ -185,11 +186,11 @@ if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
 
 ![inline](http://33.media.tumblr.com/55da4e13a379ae21f17e98078c633f6b/tumblr_nh2tiz4RET1toxnu4o1_r2_500.gif)
 
-^ Photos framework allows to observe photo library changes and animate it in UI.
+^ About this demo
 
-^ The problem is that every time library was changing the app would crash.
+^ Photos framework allows to observe photo library changes and animate it in UI. Which is nicer than `reloadData`
 
-^ A bit of a problem for the app that changes your photo library.
+^ My demo app is the almost exact copy of Apple's sample code.
 
 ^ `D E M O`
 
@@ -197,11 +198,11 @@ if let cls: AnyClass = NSClassFromString("UIPrinterSearchingView") {
 
 ![inline](assets/stack-trace.png)
 
-^ I just wanted to underline that the demo code is not from the actual app but from the sample on Apple's website. It actually crashes on iOS 8, every time you run it.
+^ Now we need to track the crash down.
 
-^ So let's talk about finding where did the symbols come from?
+^ Our first clue would be the symbols we are seeing in the all exception breakpoint.
 
-^ As you noticed on the screenshot, you can see both the class and the method name.
+^ Use "All Exceptions" breakpoint. It allows you to stop in the stack trace before throwing and not in `main.m` after the throw. It also allows to poke into registers.
 
 ---
 
@@ -350,6 +351,8 @@ struct swift_func_object {
 }
 ```
 
+^ This is how swift 1.2 represents functions internally
+
 ---
 
 ```swift
@@ -361,6 +364,8 @@ func hello(world: String) -> Void {
 
 typedef helloFn = (String) -> Void
 ```
+
+^ If this is the function we want to get called from the C-side
 
 ---
 
@@ -375,14 +380,25 @@ let opaque = COpaquePointer(bitPattern: address)
 let cFunction = CFunctionPointer<helloFn>(opaque)
 ```
 
+^ Finally, this is what we pass to the C function that takes a pointer to a function.
+
 ---
 
 # C-functions patching
 
-* Figure out parameter types.
+* Find the goddamn thing.
 * Patch implementation.
+* Fishhook - dynamically rebinding symbols in Mach-O binaries.
 * Call the original implementation maybe?
-* Use fishhook - dynamically rebinding symbols in Mach-O binaries.
+
+^ Find it
+
+^ Find a workaround.
+
+^ Use fishhook to replace functions
+
+^ This is the only part that is impossible in Swift 1.2 - can't call a C function from the pointer
+
 
 ---
 
