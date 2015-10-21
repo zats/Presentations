@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>503EA689-C74F-412D-A26C-8D616E6B61F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>51D3F75A30A8CD4F26B17AE1CB0418FC0B270626</key>
+		<string>github.com:NSFWObject/MarkovChains.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Markov.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>51D3F75A30A8CD4F26B17AE1CB0418FC0B270626</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:NSFWObject/MarkovChains.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>51D3F75A30A8CD4F26B17AE1CB0418FC0B270626</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>51D3F75A30A8CD4F26B17AE1CB0418FC0B270626</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Markov</string>
+		</dict>
+	</array>
+</dict>
+</plist>
